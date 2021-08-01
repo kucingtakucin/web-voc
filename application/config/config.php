@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://appt.demoo.id/omahan/ciarthur/';
+$config['base_url'] = 'https://appt.demoo.id/omahan/voc/';
 
 /*
 |--------------------------------------------------------------------------
@@ -136,7 +136,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = true;
+$config['composer_autoload'] = 'vendor/autoload';
 
 /*
 |--------------------------------------------------------------------------
