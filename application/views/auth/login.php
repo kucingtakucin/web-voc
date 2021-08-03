@@ -16,6 +16,9 @@
                     <input class="form-control" type="password" id="password" name="password">
                     <div class="show-hide"><span class="show"> </span></div>
                 </div>
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6Le8qtUbAAAAAPrJIr8Tw-hy-9rqgTZw3x7PD1VU"></div>
+                </div>
                 <div class="form-group mb-0">
                     <div class="checkbox p-0">
                         <input id="remember" type="checkbox" name="remember">

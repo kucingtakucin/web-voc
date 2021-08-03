@@ -4,11 +4,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Email extends MY_Controller
 {
     private $_path = 'email/';
-    private $_from = 'adam.faizal.af6@gmail.com';
+    private $_from = 'vocationofthechampions@gmail.com';
     public $to = 'adam.faizal.af6@student.uns.ac.id';
 
-    const API_KEY = 'a57e89b77246272447227a73fe474764';
-    const SECRET_KEY = '9fe694fd45f2c2aedd0def21d1199563';
+    const API_KEY = '985727e407961ef259c440f6e32e82ba';
+    const SECRET_KEY = 'bc8f165b071f3102871acfbae7258e2f';
     const SMTP_SERVER = 'tls://in-v3.mailjet.com';
     const PORT = 465; // 25, 587, 465
 
@@ -34,19 +34,33 @@ class Email extends MY_Controller
         $config['smtp_user'] = self::API_KEY;
         $config['smtp_pass'] = self::SECRET_KEY;
         $config['smtp_port'] = self::PORT;
+        $config['crlf'] = "\r\n";
+        $config['newline'] = "\r\n";
+        $config['mailtype'] = 'html';
+        // $config['mailtype'] = 'text';
+        $config['wordwrap'] = true;
 
-        $this->email->initialize($config);
-        $this->email->from($this->_from, 'VOC');
+        $this->email->initialize([
+            'protocol' => 'smtp',
+            'smtp_host' => self::SMTP_SERVER,
+            'smtp_user' => self::API_KEY,
+            'smtp_pass' => self::SECRET_KEY,
+            'smtp_port' => self::PORT,
+            'crlf' => "\r\n",
+            'newline' => "\r\n",
+        ]);
+
+        $this->email->from($this->_from, 'Vocation Of The Champions');
         $this->email->to($this->to);
 
         $this->email->subject('Email Test');
         $this->email->set_mailtype('html');
-        $this->email->message($this->load->view($this->_path . 'email', [], true));
+        $this->email->message($this->load->view($this->_path . 'email', [
+            'judul' => 'Some Description'
+        ], true));
+        // $this->email->message('test');
 
         $this->email->send(FALSE);
-
-        return $this->output->set_content_type('text/html')
-            ->set_status_header(200)
-            ->set_output($this->email->print_debugger(['headers', 'subject', 'body']));
+        echo $this->email->print_debugger(['headers', 'subject', 'body']);
     }
 }

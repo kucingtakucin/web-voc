@@ -56,7 +56,7 @@
                                         <tbody>
                                             <tr>
                                                 <td><img src="https://appt.demoo.id/tema/cuba/html/assets/images/cuba-logo1.png" alt=""></td>
-                                                <td style="text-align: right; color:#999"><span>Some Description</span></td>
+                                                <td style="text-align: right; color:#999"><span><?= $judul ?></span></td>
                                             </tr>
                                         </tbody>
                                     </table>

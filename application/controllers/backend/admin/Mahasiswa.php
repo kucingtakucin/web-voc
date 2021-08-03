@@ -2,6 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
+
 class Mahasiswa extends MY_Controller
 {
     private $_path = 'backend/admin/mahasiswa/'; // Contoh 'backend/admin/dashboard'

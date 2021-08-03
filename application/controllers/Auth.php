@@ -71,12 +71,15 @@ class Auth extends CI_Controller
 	public function login()
 	{
 		$this->data['title'] = $this->lang->line('login_heading');
-
 		// validate form input
 		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
 		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
+		$this->form_validation->set_rules('g-recaptcha-response', 'g-recaptcha-response', 'required');
+		$recaptcha = new \ReCaptcha\ReCaptcha('6Le8qtUbAAAAAA0Iu8Z3yGM_AXwTPILtfUrDWMqL');
+		$resp = $recaptcha->setExpectedHostname('appt.demoo.id')
+			->verify($this->input->post('g-recaptcha-response'));
 
-		if ($this->form_validation->run() === TRUE) {
+		if ($this->form_validation->run() === TRUE && $resp->isSuccess()) {
 			// check to see if the user is logging in
 			// check for "remember me"
 			$remember = (bool)$this->input->post('remember');

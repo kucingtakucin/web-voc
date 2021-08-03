@@ -15,7 +15,8 @@
 		"phpoffice/phpspreadsheet": "^1.18",
 		"phpoffice/phpword": "^0.18.2",
 		"dompdf/dompdf": "^1.0",
-		"league/glide": "^2.0"
+		"league/glide": "^2.0",
+		"google/recaptcha": "^1.2"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
