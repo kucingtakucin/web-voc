@@ -5,12 +5,12 @@
 			<img class="mb-5" style="margin-top: -50px;" src="<?php echo base_url(); ?>/assets/images/logo-03.png" width="180px" alt="">
 		</div>
 		<div class="space10"></div>
-		<h3 class="display-3 text-center" style="font-family: 'Poppins'; font-weight: bold; font-size: 40px; color:#9d5845;">Vocation <br class="d-none d-lg-block" />Of The Champions</h3>
+		<h3 class="display-3 text-center font-weight-bold" style="font-size: 40px; color:#9d5845;">Vocation <br class="d-none d-lg-block" />Of The Champions</h3>
 		<div class="space30"></div>
 		<div class="row gutter-60 text-center align-items-end">
 			<div class="col-md-12">
 				<center>
-					<p class="text-center" style="font-family: 'Poppins'; font-size: 20px; color:#9d5845; width: 75%">VOC singkatan dari <b>Vocation Of The Champions.</b> Dimana VOC ini merupakan
+					<p class="text-center" style="font-size: 20px; color:#9d5845; width: 75%">VOC singkatan dari <b>Vocation Of The Champions.</b> Dimana VOC ini merupakan
 						perlombaan untuk mahasiswa/i Vokasi Se-Indonesia dengan berbagai cabang
 						lomba, diantaranya Seni, Olahraga dan Penalaran.
 					</p>
@@ -22,9 +22,9 @@
 					</div>
 				</div>
 				<div class="space30"></div>
-				<h4 class="text-center" style="font-family: 'Poppins'; font-weight: medium; font-size: 25px; color:#9d5845;">"Glory In Diversity"</h4>
+				<h4 class="text-center" style="font-weight: medium; font-size: 25px; color:#9d5845;">"Glory In Diversity"</h4>
 				<center>
-					<p class="text-center" style="font-family: 'Poppins'; font-size: 20px; color:#9d5845; width: 75%;">Merupakan tema yang diusung pada VOC 2021. Memiliki maksud menunjukan bahwa
+					<p class="text-center" style="font-size: 20px; color:#9d5845; width: 75%;">Merupakan tema yang diusung pada VOC 2021. Memiliki maksud menunjukan bahwa
 						perbedaan bukanlah halangan untuk bersatu menuju kejayaan Indonesia. Serta
 						dengan acara VOC 2021 ini dapat menunjukan bahwa pendidikan vokasi juga bisa
 						memberikan andil yang besar untuk kemajuan Indonesia.</p>
@@ -41,9 +41,9 @@
 		<center>
 			<img style="margin-top: -100px;" src="<?php echo base_url(); ?>/assets/images/logo-03.png" width="25px" alt="">
 		</center>
-		<p class="text-center" style="margin-top: -40px; font-family: 'Poppins'; font-weight: normal;">Rangkaian Acara</p>
+		<p class="text-center" style="margin-top: -40px; font-weight: normal;">Rangkaian Acara</p>
 		<div class="garis">
-			<h3 class="display-3 text-center text-white" style="font-family: 'Poppins'; font-weight: bold; font-size: 40px;">VOC 2021</h3>
+			<h3 class="display-3 text-center text-white font-weight-bold" style="font-size: 40px;">VOC 2021</h3>
 		</div>
 		<div class="space60"></div>
 		<div class="grid-view">

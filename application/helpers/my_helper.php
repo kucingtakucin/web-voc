@@ -2,7 +2,7 @@
 function sistem()
 {
     return (object) [
-        "nama" => "Omahan CIARTHUR"
+        "nama" => "Vocation Of The Champions"
     ];
 }
 
