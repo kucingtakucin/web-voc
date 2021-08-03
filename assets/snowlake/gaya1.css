@@ -1,0 +1,125 @@
+.teksgambar{
+	/* background-image: url('../images/bg-1.jpeg'); */
+	background-color: #9d5845;
+}
+.teksgambar p{
+	padding: 130px 20px 0px;
+	font: bold italic 16px sans-serif;
+	color: white;
+}
+
+.pembungkus h5{position: relative;  display: inline-block;}
+
+.pembungkus h5::after{
+	content: " ";
+	position: absolute;
+	border-bottom: 1px solid white;
+	width: 60px;
+	right: -70px;	
+	top: 50%;
+}
+
+.pembatas{
+	text-align: center;
+}
+
+.pembatas .gambar{position: relative;  display: inline-block;}
+
+.pembatas .gambar::before{
+	content: " ";
+	position: absolute;
+	border-bottom: 1px solid #9d5845;
+	width: 500%;
+	left: 50px;
+	top: 50%;
+}
+
+.pembatas .gambar::after{
+	content: " ";
+	position: absolute;
+	border-bottom: 1px solid #9d5845;
+	width: 500%;
+	right: 50px;
+	top: 50%;
+}
+
+.garis{
+	text-align: center;
+}
+
+.garis h3{position: relative;  display: inline-block;}
+
+.garis h3::before{
+	content: " ";
+	position: absolute;
+	border-bottom: 1px solid white;
+	width: 30%;
+	left: 200px;
+	top: 50%;
+}
+
+.garis h3::after{
+	content: " ";
+	position: absolute;
+	border-bottom: 1px solid white;
+	width: 30%;
+	right: 200px;	
+	top: 50%;
+}
+
+@font-face {
+	font-family:'Poppins';
+	src:url('/assets/font/Poppins-Regular.ttf') format('ttf');
+	font-style:normal;
+	font-weight:normal;
+  }
+  
+  /* Italic */
+  @font-face {
+	font-family:'Poppins';
+	src:url('/assets/font/Poppins-Bold.ttf') format('ttf');
+	font-style:normal;
+	font-weight:bold;
+  }
+
+  @font-face {
+	font-family:'Poppins';
+	src:url('/assets/font/Poppins-Medium.ttf') format('ttf');
+	font-style:normal;
+	font-weight:medium;
+  }
+
+  @font-face {
+	font-family:'Poppins';
+	src:url('/assets/font/Poppins-Thin.ttf') format('ttf');
+	font-style:normal;
+	font-weight:thin;
+  }
+  
+  /* Bold */
+  /* @font-face {
+	font-family:'Poppins';
+	src:url('ubuntu-bold.woff') format('woff');
+	font-style:normal;
+	font-weight:bold;
+  } */
+  
+  /* Bold Italic */
+  /* @font-face {
+	font-family:'Poppins';
+	src:url('ubuntu-bolditalic.woff') format('woff');
+	font-style:italic;
+	font-weight:bold;
+  } */
+
+.social{
+	width: 50px;
+	border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+}
+
+.social1 li{
+	display: inline;
+    margin-right: 10px;
+}
