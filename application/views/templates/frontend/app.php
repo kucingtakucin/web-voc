@@ -24,7 +24,7 @@
 	<link rel="styleslaeet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/navigation.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/type/type.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/style2.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/gaya1.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/gaya2.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/color/purple.css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/font/font2.css">
