@@ -3,9 +3,13 @@
 	background-color: #9d5845;
 }
 .teksgambar p{
-	padding: 130px 20px 0px;
-	font: bold italic 16px sans-serif;
+	padding: 0px 20px 0px;
+	font: 16px;
 	color: white;
+}
+
+.teksgambar .gambarrr{
+width: 100px;
 }
 
 .pembungkus h5{position: relative;  display: inline-block;}

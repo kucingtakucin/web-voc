@@ -32,8 +32,8 @@
 					<div class="pembungkus">
 						<h5 style=" font-weight: normal;" class="">Telepon</h5>
 					</div>
-					<ul class="list-unstyled" style=" font-weight: normal;">
-						<li><a href="#" class="text-white">088232428385 (CP)</a></li>
+					<ul class="list-unstyled" style="font-family: poppins; font-weight: normal;">
+						<li><a href="#" class="text-white">081325416875 (CP)</a></li>
 					</ul>
 					<div class="pembungkus">
 						<h5 style=" font-weight: normal;" class="">Email</h5>
