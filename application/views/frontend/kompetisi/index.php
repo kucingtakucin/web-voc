@@ -59,7 +59,7 @@
 <!-- /.wrapper -->
 <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php echo base_url(); ?>/assets/images/bg-1.jpeg">
 	<div class="container inner pb-140">
-		<h3 class="display-3 text-center text-white" style="font-family: 'Poppins'; font-weight: bold; font-size: 40px;">Bidang Lomba</h3>
+		<h3 class="display-3 text-center text-white" style="font-family: 'Poppins'; font-weight: bold; font-size: 40px;">Buku Panduan</h3>
 		<center>
 			<p class="text-center text-white" style="font-family: 'Poppins'; font-size: 17px; width: 50%;">
 				Cek Timeline, Alur Pendaftaran, dan Jadwal Kegiatan di Buku Panduan VOC 2021
