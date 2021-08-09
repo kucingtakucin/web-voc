@@ -29,6 +29,62 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/font/font2.css">
 </head>
+<style>
+	.jumbotron {
+		background: rgba(204, 204, 204, 0.5);
+	}
+
+	.invalid-msg {
+		color: red;
+	}
+
+	blink {
+		-moz-animation-duration: 700ms;
+		-moz-animation-name: blink;
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-direction: alternate;
+
+		-webkit-animation-duration: 700ms;
+		-webkit-animation-name: blink;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+
+		animation-duration: 700ms;
+		animation-name: blink;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+
+	@-moz-keyframes blink {
+		from {
+			opacity: 1;
+		}
+
+		to {
+			opacity: 0;
+		}
+	}
+
+	@-webkit-keyframes blink {
+		from {
+			opacity: 1;
+		}
+
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes blink {
+		from {
+			opacity: 1;
+		}
+
+		to {
+			opacity: 0;
+		}
+	}
+</style>
 
 <body>
 	<div class="preloader-container">
@@ -74,7 +130,7 @@
 		</nav>
 
 		<!-- Header -->
-		<?php $this->load->view('templates/frontend/header') ?>
+		<?php $this->load->view($header) ?>
 		<!--  /.Header -->
 
 		<!-- Main Page -->
@@ -102,6 +158,8 @@
 	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<script src="<?php echo base_url(); ?>/assets/snowlake/js/plugins.js"></script>
 	<script src="<?php echo base_url(); ?>/assets/snowlake/js/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<?php $this->load->view($script) ?>
 	<script>
 		$(document).ready(function() {
 			$('.preloader-container').fadeOut(500)
