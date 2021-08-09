@@ -52,7 +52,7 @@
 	</div>
 </div> -->
 <div class="wrapper white-wrapper">
-	<img src="<?= base_url(); ?>/assets/images/pubg1.png" class="img-fluid rounded mx-auto d-block my-3" alt="pubg.png" style="width: 70%; padding-top: 50px;">
+	<img src="<?= base_url(); ?>/assets/images/ml.jpg" class="img-fluid rounded mx-auto d-block my-3" alt="ml.jpg" style="width: 70%; padding-top: 50px;">
 	<div class="jumbotron jumbotron-fluid mx-5">
 		<div class="container">
 			<h1 class="display-4 text-center">Pendaftaran Lomba Mobile Legend VOC 2021</h1>
