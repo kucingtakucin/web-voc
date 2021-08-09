@@ -158,12 +158,21 @@
 	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<script src="<?php echo base_url(); ?>/assets/snowlake/js/plugins.js"></script>
 	<script src="<?php echo base_url(); ?>/assets/snowlake/js/scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 	<?php $this->load->view($script) ?>
 	<script>
 		$(document).ready(function() {
 			$('.preloader-container').fadeOut(500)
 		})
+
+		document.querySelector(".live").addEventListener('click', function() {
+			Swal.fire("Hi Sobat Deandels", "Sabar ya Live belum dimulai untuk saat ini", "info");
+		});
+
+		document.querySelector(".klasemen").addEventListener('click', function() {
+			Swal.fire("Hi Sobat Deandels", "Sabar ya Kompetisi belum dimulai lagi", "info");
+		});
 	</script>
 </body>
 
