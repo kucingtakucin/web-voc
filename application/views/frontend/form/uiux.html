@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pendaftaran UI/UX</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	</head>
+	<style>
+		#darkened-bg {			
+			background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url(../../../../assets/images/bg-1.jpeg);
+			-webkit-background-size: cover;
+  			-moz-background-size:  cover;
+			-o-background-size: cover;
+			background-size: cover;
+        }
+		.jumbotron {
+			background: rgba(204, 204, 204, 0.5);
+		}
+  		.invalid-msg{
+    		color: red;
+  		}
+	</style>
+	<body id="darkened-bg">
+		<img src="../../../../assets/images/uiux.jpg" class="img-fluid rounded mx-auto d-block my-3" alt="uiux.jpg" style="width: 40%; height: 40%;">
+		<div class="jumbotron jumbotron-fluid mx-5">
+			<div class="container">
+			  <h1 class="display-4 text-center">Pendaftaran Lomba UI/UX VOC 2021</h1>
+			  <div class="bg-light p-5 rounded-lg m-3">
+				<p>
+					Biaya Pendaftaran Rp. 80.000,- per team. <br>
+					Biaya Pendaftaran dapat ditransfer ke rekening BNI (1134128079 - Rizquna), BCA (2380914215 - Rizquna), Mandiri (1850000496072 - Exca). <br> <br>
+					Setelah peserta melakukan pendaftaran dan pengumpulan karya di google form yang telah disediakan maka peserta wajib mengirim pesan konfirmasi kepada Mafa (0895377205773) dihari yang sama. Disertai dengan bukti pembayaran.
+				</p>
+				<hr>
+				<form id="form">
+					<div class="form-group">
+						<label>Nama Ketua Tim</label>
+						<input type="ketua" class="form-control" id="namaketua">
+						<div class="msg-err-namaketua"></div>
+					</div>
+					<div class="form-group">
+						<label>Email Ketua Tim</label>
+						<input type="ketua" class="form-control" id="emailketua">
+						<div class="msg-err-emailketua"></div>
+					</div>
+					<div class="form-group">
+						<label>Nomor Hp Ketua Tim</label>
+						<input type="ketua" class="form-control" id="nomorketua">
+						<div class="msg-err-nomorketua"></div>
+					</div>
+					<div class="form-group">
+						<label>Nama Anggota</label>
+						<input type="text" class="form-control" placeholder="Anggota 1" id="anggota1">
+						<div class="msg-err-anggota1"></div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Anggota 2" id="anggota2">
+						<div class="msg-err-anggota2"></div>
+					</div>
+					<div class="form-group">
+						<label>Asal Instansi</label>
+						<input type="ketua" class="form-control " id="instansi">
+						<div class="msg-err-instansi"></div>
+					</div>
+					<div class="text-center">
+						<button type="submit" class="btn btn-primary btn-lg" id="submit-btn" disabled>Submit</button>
+					</div>
+				</form>
+			  </div>
+			</div>
+		</div>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#namaketua').on('input', function () {
+				var firstName = $(this).val();
+				var validName = /^[a-zA-Z ]*$/;
+				if (firstName.length == 0) {
+					$('.msg-err-namaketua').addClass('invalid-msg').text("Harap diisi!!");
+					$(this).addClass('is-invalid').removeClass('is-valid');
+					
+				}
+				else if (!validName.test(firstName)) {
+					$('.msg-err-namaketua').addClass('invalid-msg').text('hanya karakter dan spasi');
+					$(this).addClass('is-invalid').removeClass('is-valid');
+					
+				}
+				else {
+					$('.msg-err-namaketua').empty();
+					$(this).addClass('is-valid').removeClass('is-invalid');
+				}
+			});
+			$('#emailketua').on('input', function () {
+				var emailAddress = $(this).val();
+				var validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				if (emailAddress.length == 0) {
+					$('.msg-err-emailketua').addClass('invalid-msg').text('Email wajib diisi');
+					$(this).addClass('is-invalid').removeClass('is-valid');
+				}
+				else if (!validEmail.test(emailAddress)) {
+					$('.msg-err-emailketua').addClass('invalid-msg').text('Alamat email tidak valid');
+					$(this).addClass('is-invalid').removeClass('is-valid');
+				}
+				else {
+					$('.msg-err-emailketua').empty();
+					$(this).addClass('is-valid').removeClass('is-invalid');
+				}
+			});
+			$('#nomorketua').on('input', function () {
+				var nomorKetua = $(this).val();
+				var rules = /^[0-9]*$/;
+				if (nomorKetua.length == 0) {
+					$('.msg-err-nomorketua').addClass('invalid-msg').text("Harap diisi!!");
+					$(this).addClass('is-invalid').removeClass('is-valid');
+					
+				}
+				else if (!rules.test(nomorKetua)) {
+					$('.msg-err-nomorketua').addClass('invalid-msg').text('hanya karakter');
+					$(this).addClass('is-invalid').removeClass('is-valid');
+					
+				}
+				else if (nomorKetua.length > 13)
+				{
+					$('.msg-err-nomorketua').addClass('invalid-msg').text("Nomor harus kurang dari 13 digit");
+					$(this).addClass('is-invalid').removeClass('is-valid');
+				}
+				else {
+					$('.msg-err-nomorketua').empty();
+					$(this).addClass('is-valid').removeClass('is-invalid');
+				}
+			});
+			$('#anggota1').on('input', function () {
+				var anggota1 = $(this).val();
+				var rules = /^[a-zA-Z ]*$/;
+				if (anggota1.length == 0) {
+					$('.msg-err-anggota1').addClass('invalid-msg').text("Harap diisi!!");
+					$(this).addClass('is-invalid').removeClass('is-valid');
+					
+				}
+				else if (!rules.test(anggota1)) {
+					$('.msg-err-anggota1').addClass('invalid-msg').text('hanya karakter dan spasi');
+					$(this).addClass('is-invalid').removeClass('is-valid');
+					
+				}
+				else {
+					$('.msg-err-anggota1').empty();
+					$(this).addClass('is-valid').removeClass('is-invalid');
+				}
+			});
+			$('#anggota2').on('input', function () {
+				var anggota2 = $(this).val();
+				var rules = /^[a-zA-Z ]*$/;
+				if (!rules.test(anggota2)) {
+					$('.msg-err-anggota2').addClass('invalid-msg').text('hanya karakter dan spasi');
+					$(this).addClass('is-invalid').removeClass('is-valid');
+					
+				} else {
+					$('.msg-err-anggota2').empty();
+					$(this).addClass('is-valid').removeClass('is-invalid');
+				}
+			});
+			$('#instansi').on('input', function () {
+				var instansi = $(this).val();
+				if (instansi.length == 0) {
+					$('.msg-err-instansi').addClass('invalid-msg').text("Harap diisi!!");
+					$(this).addClass('is-invalid').removeClass('is-valid');
+				}
+				else {
+					$('.msg-err-instansi').empty();
+					$(this).addClass('is-valid').removeClass('is-invalid');
+				}
+			});
+			$('input').on('input',function(e){
+				if($('#form').find('.is-valid').length==5){
+					$('#submit-btn').removeAttr('disabled');
+				}
+				else {
+					e.preventDefault();
+					$('#submit-btn').attr('disabled');
+				}
+			});	
+		});
+	</script>
+</html>
