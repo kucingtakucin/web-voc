@@ -57,7 +57,7 @@
 								</div>
 							</div>
 						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
+						<center><a href="<?php echo base_url(); ?>frontend/form/catur/" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
 					</div>
 				</div>
 				<!-- /.item -->
@@ -96,7 +96,7 @@
 								</div>
 							</div>
 						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
+						<center><a href="<?php echo base_url(); ?>frontend/form/ml/" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
 					</div>
 				</div>
 				<!-- /.item -->
