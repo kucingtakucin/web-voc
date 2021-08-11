@@ -16,7 +16,8 @@
 		"phpoffice/phpword": "^0.18.2",
 		"dompdf/dompdf": "^1.0",
 		"league/glide": "^2.0",
-		"google/recaptcha": "^1.2"
+		"google/recaptcha": "^1.2",
+		"guzzlehttp/guzzle": "^7.0"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"

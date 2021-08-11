@@ -36,161 +36,31 @@
 </div>
 
 <!-- /.wrapper -->
-<div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php echo base_url(); ?>/assets/images/bg-1.jpeg">
+<div class="wrapper image-wrapper bg-image" data-image-src="<?php echo base_url(); ?>/assets/images/bg-1.jpeg">
 	<div class="container inner pb-140">
 		<center>
 			<img style="margin-top: -100px;" src="<?php echo base_url(); ?>/assets/images/logo-03.png" width="25px" alt="">
 		</center>
-		<p class="text-center" style="margin-top: -40px; font-weight: normal;">Rangkaian Acara</p>
+		<p class="text-center text-white" style="margin-top: -40px; font-weight: normal;">Daftar Lomba</p>
 		<div class="garis">
 			<h3 class="display-3 text-center text-white font-weight-bold" style="font-size: 40px;">VOC 2021</h3>
 		</div>
 		<div class="space60"></div>
 		<div class="grid-view">
-			<div class="carousel owl-carousel" data-loop="true" data-margin="30" data-dots="true" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "3"}}'>
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Catur</p>
-								</div>
+			<div class="carousel owl-carousel" data-loop="true" data-margin="30" data-dots="true" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "4"}}'>
+				<?php foreach ($lomba as $item) : ?>
+					<div class="item">
+						<div class="card">
+							<div class="card-header teksgambar">
+								<img src="./uploads/lomba/<?= $item->gambar_thumb ?>" class="card-img-top img-thumbnail" alt="<?= $item->nama_lomba ?>">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title text-dark text-center font-weight-bold"><?= $item->nama_lomba ?></h5>
+								<p class="card-text text-dark text-center"><?= $item->deskripsi ?></p>
 							</div>
 						</div>
-						<center><a href="<?php echo base_url(); ?>frontend/form/catur/" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
 					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Design UI/UX</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Film Pendek</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Mobile Legends</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="<?php echo base_url(); ?>frontend/form/ml/" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>PUBG</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Tari</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Debat Bahasa Indonesia</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Essay</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>LKTI</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Poster</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
-				<div class="item">
-					<div class="card">
-						<div class="card-body">
-							<div class="card">
-								<div class="teksgambar">
-									<p>Solo Vokal</p>
-								</div>
-							</div>
-						</div>
-						<center><a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Daftar</a></center>
-					</div>
-				</div>
-				<!-- /.item -->
+				<?php endforeach ?>
 			</div>
 			<!-- /.owl-carousel -->
 		</div>

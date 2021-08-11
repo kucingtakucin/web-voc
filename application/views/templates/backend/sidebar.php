@@ -5,6 +5,20 @@
     </li>
     <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'dashboard') ?>" href="<?= base_admin('dashboard') ?>"><i data-feather="home"></i><span>Dashboard</span></a></li>
     <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'mahasiswa') ?>" href="<?= base_admin('mahasiswa') ?>"><i data-feather="book-open"></i><span>Mahasiswa</span></a></li>
+    <li class="sidebar-main-title">
+        <div>
+            <h6>Data</h6>
+        </div>
+    </li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'peserta') ?>" href="<?= base_admin('peserta') ?>"><i data-feather="user"></i><span>Peserta</span></a></li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'tim') ?>" href="<?= base_admin('tim') ?>"><i data-feather="users"></i><span>Tim</span></a></li>
+
+    <li class="sidebar-main-title">
+        <div>
+            <h6>Referensi</h6>
+        </div>
+    </li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'lomba') ?>" href="<?= base_admin('lomba') ?>"><i data-feather="star"></i><span>Lomba</span></a></li>
 
     <li class="sidebar-main-title">
         <div>

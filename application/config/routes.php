@@ -52,6 +52,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'frontend/home';
 $route['beranda'] = 'frontend/home';
 $route['kompetisi'] = 'frontend/kompetisi';
+$route['pendaftaran/individu'] = 'frontend/pendaftaran/individu';
+$route['pendaftaran/kelompok'] = 'frontend/pendaftaran/kelompok';
 
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';

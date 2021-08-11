@@ -45,7 +45,7 @@
                 render: (foto_thumb) => {
                     return $('<img>', {
                         src: `<?= BASE_URL() ?>uploads/mahasiswa/${foto_thumb}`,
-                        class: "img-thumnail rounded-circle",
+                        class: "img-thumbnail rounded-circle",
                         alt: 'Foto'
                     }).prop('outerHTML')
                 }

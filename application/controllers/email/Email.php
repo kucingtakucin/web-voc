@@ -5,7 +5,7 @@ class Email extends MY_Controller
 {
     private $_path = 'email/';
     private $_from = 'vocationofthechampions@gmail.com';
-    public $to = 'adam.faizal.af6@student.uns.ac.id';
+    // public $to = 'adam.faizal.af6@student.uns.ac.id';
 
     const API_KEY = '985727e407961ef259c440f6e32e82ba';
     const SECRET_KEY = 'bc8f165b071f3102871acfbae7258e2f';
@@ -51,14 +51,16 @@ class Email extends MY_Controller
         ]);
 
         $this->email->from($this->_from, 'Vocation Of The Champions');
-        $this->email->to($this->to);
+        $this->email->to($this->input->post('to'));
 
         $this->email->subject('Email Test');
         $this->email->set_mailtype('html');
+
         $this->email->message($this->load->view($this->_path . 'email', [
             'judul' => 'Some Description'
         ], true));
         // $this->email->message('test');
+
 
         $this->email->send(FALSE);
         echo $this->email->print_debugger(['headers', 'subject', 'body']);

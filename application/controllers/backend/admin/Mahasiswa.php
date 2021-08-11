@@ -1,7 +1,4 @@
-<?php
-
-defined('BASEPATH') or exit('No direct script access allowed');
-
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
 class Mahasiswa extends MY_Controller
 {

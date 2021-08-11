@@ -98,7 +98,7 @@
 	<div class="content-wrapper">
 		<nav class="navbar bg-white navbar-expand-lg">
 			<div class="container justify-content-center">
-				<div class="navbar-brand"><a href="<?= base_url() ?>"><img src="#" srcset="<?php echo base_url(); ?>/assets/images/logo-02.png 1x, <?php echo base_url(); ?>/assets/images/logo-02.png 2x" style="width: 100px;" alt="" /></a></div>
+				<div class="navbar-brand"><a href="<?= base_url() ?>"><img src="#" srcset="<?php echo base_url(); ?>/assets/images/logo-02.png 1x, <?php echo base_url(); ?>/assets/images/logo-02.png 2x" style="width: 75px;" alt="" /></a></div>
 				<div class="navbar-other ml-auto order-lg-3">
 					<ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
 						<li class="nav-item">
@@ -160,19 +160,37 @@
 	<script src="<?php echo base_url(); ?>/assets/snowlake/js/scripts.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<script src="https://appt.demoo.id/tema/cuba/html/assets/js/form-validation-custom.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
 	<?php $this->load->view($script) ?>
 	<script>
 		$(document).ready(function() {
 			$('.preloader-container').fadeOut(500)
+
+			$('.live').click(function() {
+				Swal.fire({
+					title: "Hi Sobat Daendels!",
+					text: "Sabar ya, Live belum dimulai untuk saat ini",
+					icon: "info"
+				});
+			})
+
+			$('.klasemen').click(function() {
+				Swal.fire({
+					title: "Hi Sobat Daendels!",
+					text: "Sabar ya, Kompetisi akan dimulai sebentar lagi",
+					icon: "info"
+				});
+			})
 		})
 
-		document.querySelector(".live").addEventListener('click', function() {
-			Swal.fire("Hi Sobat Deandels", "Sabar ya Live belum dimulai untuk saat ini", "info");
-		});
+		// document.querySelector(".live").addEventListener('click', function() {
+		// 	Swal.fire("Hi Sobat Deandels", "Sabar ya Live belum dimulai untuk saat ini", "info");
+		// });
 
-		document.querySelector(".klasemen").addEventListener('click', function() {
-			Swal.fire("Hi Sobat Deandels", "Sabar ya Kompetisi belum dimulai lagi", "info");
-		});
+		// document.querySelector(".klasemen").addEventListener('click', function() {
+		// 	Swal.fire("Hi Sobat Deandels", "Sabar ya Kompetisi belum dimulai lagi", "info");
+		// });
 	</script>
 </body>
 

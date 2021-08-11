@@ -21,6 +21,7 @@ class Home extends MY_Controller
 			'script' => $this->_path . 'index_js',
 			'modals' => [],
 			'header' => $this->_path . 'header',
+			'lomba' => $this->db->get_where('lomba', ['is_active' => '1'])->result()
 		]);
 	}
 }

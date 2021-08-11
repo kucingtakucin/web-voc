@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class ML extends MY_Controller
 {
-	private $_path = 'frontend/form/ml/';
+	private $_path = 'frontend/_form/ml/';
 	private $_table = '';
 
 	public function __construct()

@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Catur extends MY_Controller
 {
-	private $_path = 'frontend/form/catur/';
+	private $_path = 'frontend/_form/catur/';
 	private $_table = '';
 
 	public function __construct()

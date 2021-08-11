@@ -50,7 +50,7 @@
     <!-- login page start-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-7"><img class="bg-img-cover bg-center" src="<?= base_url() ?>/assets/cuba/images/login/2.jpg" alt="looginpage">
+            <div class="col-xl-7"><img class="bg-img-cover bg-center" src="<?= base_url() ?>/assets/images/bg.jpeg" alt="loginpage">
             </div>
             <div class="col-xl-5 p-0">
                 <?php $this->load->view($page) ?>
@@ -74,6 +74,15 @@
         <script>
             $(document).ready(function() {
                 $('.preloader-container').fadeOut(500)
+
+                let width = $('.g-recaptcha').parent().width();
+                if (width < 302) {
+                    let scale = width / 302;
+                    $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+                    $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+                    $('.g-recaptcha').css('transform-origin', '0 0');
+                    $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+                }
             })
         </script>
         <!-- Plugin used-->
