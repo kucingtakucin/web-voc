@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Kompetisi extends MY_Controller
+class Catur extends MY_Controller
 {
-	private $_path = 'frontend/kompetisi/';
+	private $_path = 'frontend/form/catur/';
 	private $_table = '';
 
 	public function __construct()
@@ -14,7 +14,7 @@ class Kompetisi extends MY_Controller
 	public function index()
 	{
 		$this->templates->load([
-			'title' => 'Kompetisi',
+			'title' => 'Catur',
 			'type' => 'frontend',
 			'uri_segment' => $this->_path,
 			'page' => $this->_path . 'index',
