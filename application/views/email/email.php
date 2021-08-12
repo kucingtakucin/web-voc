@@ -69,7 +69,7 @@
 														Bila Anda mengalami kesulitan atau memiliki pertanyaan selama proses keberlangsungan lomba, Anda dapat bertanya di Forum Diskusi yang telah kami sediakan</p>
 													<center>
 														<?php 
-														switch ($lomba) {
+														switch (echo $lomba) {
 															case 1: 
 															?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
