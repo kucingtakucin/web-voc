@@ -51,24 +51,24 @@
 
 					<div class="form-group">
 						<h6>No. WhatsApp Ketua</h6>
-						<input type="number" name="no_wa_ketua" class="form-control" autocomplete="off" required placeholder="Masukkan No. WhatsApp Ketua">
+						<input type="number" min="0" name="no_wa_ketua" class="form-control" autocomplete="off" required placeholder="Masukkan No. WhatsApp Ketua">
 						<div class="invalid-feedback text-danger">Please choose a unique and valid no whatsapp ketua</div>
 						<div class="valid-feedback text-success">Looks good</div>
 					</div>
 
-					<!-- <div class="form-group id_ml">
-						<h6>ID Mobile Legends</h6>
-						<input type="number" name="id_ml" class="form-control" autocomplete="off" required placeholder="Masukkan ID Mobile Legends">
+					<div class="form-group id_ml_ketua" style="display: none;">
+						<h6>ID Mobile Legends Ketua</h6>
+						<input type="number" min="0" name="id_ml_ketua" id="id_ml_ketua" class="form-control" autocomplete="off" placeholder="Masukkan ID Mobile Legends Ketua">
 						<div class="invalid-feedback text-danger">Please choose a unique and valid id mobile legends</div>
 						<div class="valid-feedback text-success">Looks good</div>
 					</div>
 
-					<div class="form-group id_pubg">
-						<h6>ID PUBG</h6>
-						<input type="number" name="id_pubg" class="form-control" autocomplete="off" required placeholder="Masukkan ID PUBG">
+					<div class="form-group id_pubg_ketua" style="display: none;">
+						<h6>ID PUBG Ketua</h6>
+						<input type="number" min="0" name="id_pubg_ketua" id="id_pubg_ketua" class="form-control" autocomplete="off" placeholder="Masukkan ID PUBG Ketua">
 						<div class="invalid-feedback text-danger">Please choose a unique and valid id pubg</div>
 						<div class="valid-feedback text-success">Looks good</div>
-					</div> -->
+					</div>
 
 					<div class="form-group">
 						<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar Ketua</h6>
@@ -81,7 +81,6 @@
 								<label class="custom-file-label" for="scan_kartu_ketua">Choose file</label>
 								<div class="invalid-tooltip">Please choose a unique and valid scan kartu ketua</div>
 								<div class="valid-tooltip">Looks good</div>
-
 							</div>
 						</div>
 					</div>
@@ -116,15 +115,13 @@
 						</div>
 					</div>
 					<input type="hidden" name="increment" id="increment">
-					<input type="hidden" name="MAX_FILE_SIZE" value="4194304"> <!-- 4 MB -->
+					<input type="hidden" name="MAX_FILE_SIZE" value="<?= (1024 * 1000 * 10) ?>"> <!-- 4 MB -->
 
 					<hr>
 					<!-- ================================================== -->
-
+					<div class="wadah_anggota"></div>
 					<button type="button" id="tambah_anggota" class="btn btn-primary">Tambah Anggota</button>
 					<button type="button" id="kurangi_anggota" class="btn btn-danger">Kurangi Anggota</button>
-					<div class="space30"></div>
-					<div class="wadah_anggota"></div>
 
 					<section class="d-flex flex-row justify-content-end align-items-center">
 						<button class="btn btn-info" type="submit">Daftar Lomba Sekarang</button>

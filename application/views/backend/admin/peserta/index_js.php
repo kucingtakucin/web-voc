@@ -205,7 +205,82 @@
      * Keperluan CRUD
      */
     // ================================================== //
-    // ... //
+    get_data = (form) => {
+        let formData = new FormData();
+        formData.append('id', $(form).data('id'));
+
+        fetch(BASE_URL + 'get_where', {
+            method: 'POST',
+            body: formData,
+        }).then(response => {
+            if (response.ok) return response.json()
+            throw new Error(response.statusText)
+        }).then(response => {
+            let row = response.data;
+            id_data = row.id;
+            $('#modal_detail').modal('show');
+            $('#form_detail input[name=nama_lengkap]').val(row.nama);
+            $('#form_detail input[name=email]').val(row.email);
+            $('#form_detail input[name=no_hp]').val(row.angkatan);
+            $('#form_detail input[name=status]').val(row.is_ketua ? (row.is_ketua == '1' ? 'Ketua' : 'Anggota') : 'Solo Player');
+            $('#form_detail input[name=no_hp]').val(row.no_hp);
+            $('#form_detail input[name=id_tim]').val(row.nama_tim);
+            $('#form_detail input[name=id_lomba]').val(row.nama_lomba);
+
+            if (row.id_pubg) {
+                $('.wadah_pubg').fadeIn(750)
+                $('.wadah_ml').fadeOut(750)
+                $('#id_pubg').val(row.id_pubg)
+            } else if (row.id_ml) {
+                $('.wadah_ml').fadeIn(750)
+                $('.wadah_pubg').fadeOut(750)
+                $('#id_ml').val(row.id_ml)
+            } else {
+                $('.wadah_pubg').fadeOut(750)
+                $('.wadah_ml').fadeOut(750)
+                $('#id_pubg').val(null)
+                $('#id_ml').val(null)
+            }
+
+            $('#download_scan_kartu').prop('href', "<?= base_url('uploads/peserta/') ?>" + row.scan_kartu)
+            if (row.is_ketua && row.is_ketua == '1' || !row.is_ketua) {
+                $('#download_bukti_transfer').addClass('btn-primary')
+                $('#download_bukti_transfer').removeClass('btn-secondary')
+                $('#download_bukti_transfer').prop('disabled', false)
+
+                $('#download_karya').addClass('btn-primary')
+                $('#download_karya').removeClass('btn-secondary')
+                $('#download_karya').prop('disabled', false)
+
+                $('#download_bukti_transfer').prop('href', "<?= base_url('uploads/peserta/') ?>" + row.bukti_transfer)
+
+                if (row.id_lomba == '1' || row.id_lomba == '2') {
+                    $('#download_karya').removeClass('btn-primary')
+                    $('#download_karya').addClass('btn-secondary')
+                    $('#download_karya').prop('disabled', true)
+                } else {
+                    $('#download_karya').prop('href', "<?= base_url('uploads/peserta/') ?>" + row.unggah_karya);
+                }
+            } else {
+                $('#download_bukti_transfer').removeClass('btn-primary')
+                $('#download_bukti_transfer').addClass('btn-secondary')
+                $('#download_bukti_transfer').prop('disabled', true)
+
+                $('#download_karya').removeClass('btn-primary')
+                $('#download_karya').addClass('btn-secondary')
+                $('#download_karya').prop('disabled', true)
+            }
+        }).catch(error => {
+            console.error(error)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        })
+    }
 
     // ================================================== //
 
@@ -213,7 +288,14 @@
      * Keperluan event click tombol dan submit form
      */
     // ================================================== //
-    // ... //
+    $('#table_data').on('click', '.tombol_detail', function(event) {
+        event.preventDefault()
+        get_data(this);
+    });
+
+    $('#tombol_export').click(function() {
+        location.replace(BASE_URL + 'export_excel')
+    })
 
     // ================================================== //
 

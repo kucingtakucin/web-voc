@@ -12,6 +12,8 @@ class Pendaftaran extends MY_Controller
         $this->load->model('backend/admin/tim/M_Tim');
         $this->load->model('backend/admin/peserta/M_Peserta');
         $this->load->library(['upload', 'image_lib']);
+        $this->output->set_header('Access-Control-Allow-Origin: ' . base_url());
+        $this->output->set_header('Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS');
     }
 
     public function index()
@@ -165,6 +167,8 @@ class Pendaftaran extends MY_Controller
                 'is_ketua' => '1',
                 'id_tim' => $id_tim,
                 'id_lomba' => $this->input->post('id_lomba', true),
+                'id_pubg' => $this->input->post('id_pubg_ketua', true),
+                'id_ml' => $this->input->post('id_ml_ketua', true),
                 'scan_kartu' => $data_upload['scan_kartu_ketua'],
                 'bukti_transfer' => $data_upload['bukti_transfer'],
                 'unggah_karya' => $data_upload['unggah_karya'],
@@ -193,7 +197,9 @@ class Pendaftaran extends MY_Controller
                     'no_hp' => $this->input->post("no_wa_anggota_$i", true),
                     'is_ketua' => '0',
                     'id_tim' => $id_tim,
-                    'id_lomba' => $this->input->post('id_lomba', true),
+                    'id_lomba' => $this->input->post("id_lomba", true),
+                    'id_pubg' => $this->input->post("id_pubg_anggota_$i", true),
+                    'id_ml' => $this->input->post("id_ml_anggota_$i", true),
                     'scan_kartu' => $data_upload["scan_kartu_anggota_$i"],
                     'bukti_transfer' => null,
                     'unggah_karya' => null,
@@ -216,18 +222,7 @@ class Pendaftaran extends MY_Controller
             ->set_status_header(200)
             ->set_output(json_encode([
                 'status' => true,
-                'message' => 'Berhasil melakukan pendaftaran. Silakan cek email kamu ya!',
+                'message' => 'Berhasil melakukan pendaftaran. Silakan cek email kamu ya! Cek di folder spam bila tidak ada di kotak masuk.',
             ]));
-    }
-
-    private function _ujiemail()
-    {
-        $client = new GuzzleHttp\Client(['base_uri' => base_url()]);
-        $response = $client->request('POST', 'email', [
-            'form_params' => [
-                'to' => 'adam.faizal.af6@student.uns.ac.id'
-            ]
-        ]);
-        var_dump($response);
     }
 }

@@ -1,5 +1,5 @@
 <script type="text/javascript">
-	let anggota, maks_anggota;
+	let anggota, maks_anggota, status_ml, status_pubg;
 	const BASE_URL = "<?= base_url($uri_segment) ?>"
 
 	$(() => {
@@ -38,6 +38,9 @@
 			})
 
 		maks_anggota = 0
+		anggota = 0;
+		status_pubg = false
+		status_ml = false
 		$('select.lomba').change(function(event) {
 			if (Date.now() < Date.parse($(this).find(':selected').data('opening'))) {
 				Swal.fire({
@@ -62,16 +65,43 @@
 			if ($(this).val() == '1' || $(this).val() == '2') {
 				$('#unggah_karya').prop('required', false)
 				$('.unggah_karya').fadeOut(750)
+				if ($(this).val() == '1') {
+					status_pubg = true
+					status_ml = false
+					$('.id_pubg_ketua').fadeIn(750)
+					$('#id_pubg_ketua').prop('required', true)
+					$('.id_ml_ketua').fadeOut(750)
+					$('#id_ml_ketua').prop('required', false)
+				}
+				if ($(this).val() == '2') {
+					status_ml = true
+					status_pubg = false
+					$('.id_ml_ketua').fadeIn(750)
+					$('#id_ml_ketua').prop('required', true)
+					$('.id_pubg_ketua').fadeOut(750)
+					$('#id_pubg_ketua').prop('required', false)
+				}
 			} else {
+				status_ml = false
+				status_pubg = false
 				$('.unggah_karya').fadeIn(750)
 				$('#unggah_karya').prop('required', true)
+				$('.id_ml_ketua').fadeOut(750)
+				$('#id_ml_ketua').prop('required', false)
+				$('.id_pubg_ketua').fadeOut(750)
+				$('#id_pubg_ketua').prop('required', false)
 			}
 
-			maks_anggota = parseInt($(this).find(':selected').data('maks_anggota'))
+			if ($(this).find(':selected').data('maks_anggota')) {
+				maks_anggota = parseInt($(this).find(':selected').data('maks_anggota'))
+			} else {
+				maks_anggota = 0
+			}
+			anggota = 0;
+			$('#increment').val(null)
 			$('.wadah_anggota').html('')
 		})
 
-		anggota = 0;
 		$('#tambah_anggota').click(function() {
 			if (!$('select.lomba').val()) {
 				Swal.fire({
@@ -96,6 +126,7 @@
 				anggota--;
 				return;
 			}
+
 			let html = `
 				<div id="anggota_ke${anggota}" style="display: none;">
 					<div class="form-group">
@@ -114,12 +145,34 @@
 
 					<div class="form-group">
 						<h6>No. WhatsApp Anggota ${anggota}</h6>
-						<input type="number" name="no_wa_anggota_${anggota}" autocomplete="off" class="form-control" required placeholder="Masukkan No. WhatsApp Anggota ${anggota}">
+						<input type="number" min="0" name="no_wa_anggota_${anggota}" autocomplete="off" class="form-control" required placeholder="Masukkan No. WhatsApp Anggota ${anggota}">
 						<div class="invalid-feedback text-danger">Please choose a unique and valid no whatsapp anggota ${anggota}</div>
 						<div class="valid-feedback text-success">Looks good</div>
-					</div>
-					
-					<div class="form-group">
+					</div>`
+
+			if (status_ml) {
+				html += `
+				<div class="form-group id_ml_anggota_${anggota}">
+					<h6>ID Mobile Legends Anggota ${anggota}</h6>
+					<input type="number" min="0" name="id_ml_anggota_${anggota}" id="id_ml_anggota_${anggota}" class="form-control" required autocomplete="off" placeholder="Masukkan ID Mobile Legends Anggota ${anggota}">
+					<div class="invalid-feedback text-danger">Please choose a unique and valid id mobile legends</div>
+					<div class="valid-feedback text-success">Looks good</div>
+				</div>
+			`
+			}
+
+			if (status_pubg) {
+				html += `
+				<div class="form-group id_pubg_anggota_${anggota}">
+					<h6>ID PUBG Anggota ${anggota}</h6>
+					<input type="number" min="0" name="id_pubg_anggota_${anggota}" id="id_pubg_anggota_${anggota}" class="form-control" required autocomplete="off" placeholder="Masukkan ID PUBG Anggota ${anggota}">
+					<div class="invalid-feedback text-danger">Please choose a unique and valid id pubg</div>
+					<div class="valid-feedback text-success">Looks good</div>
+				</div>
+			`
+			}
+
+			html += `<div class="form-group">
 					<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar Anggota ${anggota}</h6>
 						<div class="input-group">
 							<div class="input-group-prepend">
@@ -198,17 +251,13 @@
 							icon: 'success',
 							title: 'Success!',
 							text: response.message,
-							showConfirmButton: false,
-							timer: 1500
 						})
 					}).catch(error => {
-						console.error(error);
+						console.log(error);
 						Swal.fire({
 							icon: 'error',
 							title: 'Oops...',
-							text: error.message,
-							showConfirmButton: false,
-							timer: 1500
+							html: "Ada masalah saat melakukan pendaftaran! Sepertinya ukuran file kamu terlalu besar. Maks <b>10MB</b>",
 						})
 					}).finally(() => {
 						$('#pendaftaran_lomba_kelompok button[type=submit]').show();
@@ -217,7 +266,9 @@
 						$('#pendaftaran_lomba_kelompok select').val(null).trigger('change')
 						$('#pendaftaran_lomba_kelompok').removeClass('was-validated')
 						$('.wadah_anggota').html('')
+						$('#increment').val(null)
 						maks_anggota = 0;
+						anggota = 0;
 					})
 				}
 			})

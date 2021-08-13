@@ -70,7 +70,7 @@
                 name: 'maks_anggota',
                 data: 'maks_anggota',
                 render: (maks_anggota) => {
-                    return maks_anggota ? maks_anggota + ' Orang' : '-'
+                    return maks_anggota > 0 ? maks_anggota + ' Orang' : '-'
                 }
             }, {
                 title: 'Kategori',
