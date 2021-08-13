@@ -9,10 +9,10 @@
 	</li>
 	<li class="nav-item"><a class="nav-link klasemen" style="font-weight: normal;" href="#">Klasemen</a>
 	</li>
-	<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Pendaftaran</a>
-		<ul class="dropdown-menu">
+	<li class="nav-item"><a class="nav-link" style="font-weight: normal;" href="<?= base_url('pendaftaran') ?>">Pendaftaran</a>
+		<!-- <ul class="dropdown-menu">
 			<li><a class="dropdown-item" href="<?= base_url('pendaftaran/individu') ?>">Lomba Individu</a></li>
 			<li><a class="dropdown-item" href="<?= base_url('pendaftaran/kelompok') ?>">Lomba Kelompok</a></li>
-		</ul>
+		</ul> -->
 	</li>
 </ul>
