@@ -209,6 +209,7 @@ class Pendaftaran extends MY_Controller
         $client->request('POST', 'email', [
             'form_params' => [
                 'to' => $this->input->post('email_ketua', true),
+                'id_lomba' => $this->input->post('id_lomba', true);
             ]
         ]);
 
