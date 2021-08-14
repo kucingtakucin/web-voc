@@ -16,24 +16,26 @@
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/css/layers.css">
 	<link rel="styleslaeet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/css/navigation.css">
+	<link rel="styleslaeet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/type/type.css">
 	<!-- <link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/type/type.css">
-	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style.css">
+	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-ht<?= base_url() ?>/assets/cuba/ml/snowlake/style.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/color/purple.css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/font/font2.css"> -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/plugins.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/layers.css">
 	<link rel="styleslaeet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/navigation.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/type/type.css"> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/icofont.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/style2.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/gaya2.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/color/purple.css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/font/font2.css">
-
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <style>

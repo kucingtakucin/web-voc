@@ -3,6 +3,7 @@
 	const BASE_URL = "<?= base_url($uri_segment) ?>"
 
 	$(() => {
+
 		bsCustomFileInput.init()
 
 		// Select lomba
@@ -61,6 +62,15 @@
 		})
 
 		const daftar_lomba_individu = (form) => {
+			if (!grecaptcha.getResponse()) {
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					html: "Recaptcha wajib dicentang!",
+				})
+				return;
+			}
+
 			Swal.fire({
 				title: 'Apakah kamu yakin untuk mendaftar?',
 				text: "Pastikan data yang terisi sudah benar!",
@@ -89,11 +99,19 @@
 						if (response.ok) return response.json()
 						throw new Error(response.statusText)
 					}).then(response => {
-						Swal.fire({
-							icon: 'success',
-							title: 'Success!',
-							text: response.message,
-						})
+						if (response.status) {
+							Swal.fire({
+								icon: 'success',
+								title: 'Success!',
+								text: response.message,
+							})
+						} else {
+							Swal.fire({
+								icon: 'error',
+								title: 'Oops...',
+								html: response.message,
+							})
+						}
 					}).catch(error => {
 						console.log(error);
 						Swal.fire({

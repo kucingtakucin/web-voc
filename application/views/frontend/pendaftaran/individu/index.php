@@ -87,7 +87,7 @@
 							</div>
 						</div>
 					</div>
-					<input type="hidden" name="MAX_FILE_SIZE" value="<?= (1024 * 1000 * 10) ?>"> <!-- 4 MB -->
+					<input type="hidden" name="MAX_FILE_SIZE" value="<?= (1024 * 1000 * 10) ?>"> <!-- 10 MB -->
 					<div class="form-group">
 						<div class="g-recaptcha" data-sitekey="6Le8qtUbAAAAAPrJIr8Tw-hy-9rqgTZw3x7PD1VU"></div>
 						<div class="invalid-feedback text-danger">recaptcha required</div>

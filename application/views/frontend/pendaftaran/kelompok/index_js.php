@@ -220,6 +220,15 @@
 		})
 
 		const daftar_lomba_kelompok = (form) => {
+			if (!grecaptcha.getResponse()) {
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					html: "Recaptcha wajib dicentang!",
+				})
+				return;
+			}
+
 			Swal.fire({
 				title: 'Apakah kamu yakin untuk mendaftar?',
 				text: "Pastikan data yang terisi sudah benar!",

@@ -78,7 +78,7 @@ class Pendaftaran extends MY_Controller
     public function daftar_individu()
     {
         $recaptcha = new \ReCaptcha\ReCaptcha('6Le8qtUbAAAAAA0Iu8Z3yGM_AXwTPILtfUrDWMqL');
-        $resp = $recaptcha->setExpectedHostname('appt.demoo.id')
+        $recaptcha->setExpectedHostname('appt.demoo.id')
             ->verify($this->input->post('g-recaptcha-response'));
 
         $this->upload->initialize([
@@ -173,7 +173,7 @@ class Pendaftaran extends MY_Controller
     public function daftar_kelompok()
     {
         $recaptcha = new \ReCaptcha\ReCaptcha('6Le8qtUbAAAAAA0Iu8Z3yGM_AXwTPILtfUrDWMqL');
-        $resp = $recaptcha->setExpectedHostname('appt.demoo.id')
+        $recaptcha->setExpectedHostname('appt.demoo.id')
             ->verify($this->input->post('g-recaptcha-response'));
 
         $this->upload->initialize([
