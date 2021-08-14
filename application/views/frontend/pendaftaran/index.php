@@ -17,7 +17,7 @@
 						<div class="card">
 							<div class="teksgambar">
 								<center>
-									<img src="" style="width: 150px; color: white;" alt="lomba individu.jpg">
+									<img src="<?php echo base_url(); ?>/assets/images/individu.jpeg" style="width: 150px; color: white;" alt="lomba individu.jpg">
 								</center>
 								<!-- <p>Catur</p> -->
 							</div>
@@ -34,7 +34,7 @@
 						<div class="card">
 							<div class="teksgambar">
 								<center>
-									<img src="" style="width: 150px; color: white;" alt="lomba kelompok.jpg">
+									<img src="<?php echo base_url(); ?>/assets/images/group.jpeg" style="width: 150px; color: white;" alt="lomba kelompok.jpg">
 								</center>
 								<!-- <p>Catur</p> -->
 							</div>
