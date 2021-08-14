@@ -123,6 +123,13 @@ class Pendaftaran extends MY_Controller
 
 		// Upload dokumen
 		foreach ($_FILES as $key => $file) {
+			if (($this->input->post('id_lomba') == '11') &&
+				$key == 'unggah_karya'
+			) {
+				$data_upload['unggah_karya'] = null;
+				continue; // Unggah karya di skip kalau lomba catur
+			}
+
 			if (!$this->upload->do_upload($key)) {
 				return $this->output->set_content_type('application/json')
 					->set_status_header(404)
