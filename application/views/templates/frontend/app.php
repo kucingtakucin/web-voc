@@ -6,23 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/logo-03.png">
 	<title><?= sistem()->nama ?></title>
-	<!-- <link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/plugins.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/css/layers.css">
 	<link rel="styleslaeet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/css/navigation.css">
-	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/type/type.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/type/type.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/color/purple.css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/font/font2.css"> -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/plugins.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/layers.css">
 	<link rel="styleslaeet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/navigation.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/type/type.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/type/type.css"> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/style2.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/gaya2.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/color/purple.css">
@@ -142,22 +142,22 @@
 		<!-- /.Footer -->
 	</div>
 	<!-- /.content-wrapper -->
-	<script src="<?php echo base_url(); ?>/assets/snowlake/js/popper.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/js/jquery.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/jquery.themepunch.tools.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/revolution/js/extensions/revolution.extension.video.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/js/plugins.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/snowlake/js/scripts.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/js/popper.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/js/jquery.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/js/bootstrap.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/js/extensions/revolution.extension.video.min.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/js/plugins.js"></script>
+	<script src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/js/scripts.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 	<script src="https://appt.demoo.id/tema/cuba/html/assets/js/form-validation-custom.js"></script>

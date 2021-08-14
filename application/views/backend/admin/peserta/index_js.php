@@ -49,6 +49,9 @@
             title: 'Tim',
             name: 'nama_tim',
             data: 'nama_tim',
+            render: (nama_tim) => {
+                return nama_tim ? nama_tim : '-'
+            }
         }, {
             title: 'Lomba',
             name: 'nama_lomba',

@@ -77,6 +77,93 @@ class Pendaftaran extends MY_Controller
 
     public function daftar_individu()
     {
+        $this->upload->initialize([
+            'upload_path' => './uploads/peserta/',
+            'allowed_types' => 'jpg|jpeg|png|pdf|zip|rar',
+            'max_size' => 10240,
+            'encrypt_name' => true,
+            'remove_spaces' => true
+        ]);
+
+        $data_upload = [];
+        foreach ($_FILES as $key => $file) {        // Cek error
+            switch ($file['error']) {
+                case 1:
+                    return $this->output->set_content_type('application/json')
+                        ->set_status_header(404)
+                        ->set_output(json_encode([
+                            'status' => false,
+                            'message' => 'The uploaded file exceeds the <i>upload_max_filesize</i> directive in <b>php.ini</b>'
+                        ]));
+                    break;
+                case 2:
+                    return $this->output->set_content_type('application/json')
+                        ->set_status_header(404)
+                        ->set_output(json_encode([
+                            'status' => false,
+                            'message' => 'Maaf, ukuran file anda terlalu besar! Maksimal <b>10MB</b>'
+                        ]));
+                    break;
+                case 3:
+                    return $this->output->set_content_type('application/json')
+                        ->set_status_header(404)
+                        ->set_output(json_encode([
+                            'status' => false,
+                            'message' => 'Maaf, file hanya terupload sebagian, silakan coba lagi!'
+                        ]));
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        // Upload dokumen
+        foreach ($_FILES as $key => $file) {
+            if (!$this->upload->do_upload($key)) {
+                return $this->output->set_content_type('application/json')
+                    ->set_status_header(404)
+                    ->set_output(json_encode([
+                        'status' => false,
+                        'message' => $this->upload->display_errors()
+                    ]));
+            } else {
+                $data_upload[$key] = $this->upload->data('file_name');
+            }
+        }
+
+        // Tambah 
+        $this->M_Peserta->insert(
+            [
+                'nama' => $this->input->post('nama', true),
+                'email' => $this->input->post('email', true),
+                'no_hp' => $this->input->post('no_wa', true),
+                'is_ketua' => null,
+                'id_tim' => null,
+                'id_lomba' => $this->input->post('id_lomba', true),
+                'scan_kartu' => $data_upload['scan_kartu'],
+                'bukti_transfer' => $data_upload['bukti_transfer'],
+                'unggah_karya' => $data_upload['unggah_karya'],
+                'is_active' => '1',
+                'created_at' => date('Y-m-d H:i:s'),
+                'created_by' => get_user_id(),
+            ]
+        );
+
+        // Kirim email
+        $client = new GuzzleHttp\Client(['base_uri' => base_url()]);
+        $client->request('POST', 'email', [
+            'form_params' => [
+                'to' => $this->input->post('email', true),
+                'id_lomba' => $this->input->post('id_lomba', true)
+            ]
+        ]);
+
+        return $this->output->set_content_type('application/json')
+            ->set_status_header(200)
+            ->set_output(json_encode([
+                'status' => true,
+                'message' => 'Berhasil melakukan pendaftaran. Silakan cek email kamu ya! Cek di folder spam bila tidak ada di kotak masuk.',
+            ]));
     }
 
     public function daftar_kelompok()
@@ -215,7 +302,7 @@ class Pendaftaran extends MY_Controller
         $client->request('POST', 'email', [
             'form_params' => [
                 'to' => $this->input->post('email_ketua', true),
-                'id_lomba' => $this->input->post('id_lomba', true);
+                'id_lomba' => $this->input->post('id_lomba', true)
             ]
         ]);
 

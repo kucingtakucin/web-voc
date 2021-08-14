@@ -4,9 +4,9 @@
 		<center>
 			<img style="margin-top: -100px;" src="<?php echo base_url(); ?>/assets/images/logo-03.png" width="25px" alt="">
 		</center>
-		<p class="text-center" style="margin-top: -40px; font-family: 'Poppins'; font-weight: normal;">Kategori Lomba</p>
+		<p class="text-center" style="margin-top: -40px; font-weight: normal;">Kategori Lomba</p>
 		<div class="garis1" style="color: black;">
-			<h3 class="display-3 text-center text-dark" style="font-family: 'Poppins'; font-weight: bold; font-size: 40px;">VOC 2021</h3>
+			<h3 class="display-3 text-center text-dark" style="font-weight: bold; font-size: 40px;">VOC 2021</h3>
 		</div>
 		<div class="space60"></div>
 		<div class="row">

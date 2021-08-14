@@ -68,63 +68,41 @@
 													<p>Anda telah terdaftar menjadi peserta lomba Vocational Of The Champions.
 														Bila Anda mengalami kesulitan atau memiliki pertanyaan selama proses keberlangsungan lomba, Anda dapat bertanya di Forum Diskusi yang telah kami sediakan</p>
 													<center>
-														<?php 
-														switch (echo $lomba) {
-															case 1: 
-															?>
+														<?php switch ($lomba):
+															case 1: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 2:
-																?>
+															<?php break;
+															case 2: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 3:
-																?>
+															<?php break;
+															case 3: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 4:
-																?>
+															<?php break;
+															case 4: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 5:
-																?>
+															<?php break;
+															case 5: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 6:
-																?>
+															<?php break;
+															case 6: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 7:
-																?>
+															<?php break;
+															case 7: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 8:
-																?>
+															<?php break;
+															case 8: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;	
-															case 9:
-																?>
+															<?php break;
+															case 9: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
-																break;
-															case 11:
-																?>
+															<?php break;
+															case 11: ?>
 																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
-																<?php 
+														<?php
 															default:
 																# code...
 																break;
-														}
-														?>
-														
+														endswitch ?>
 													</center>
 													<!-- <a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a> -->
 													<p>Selamat berlomba! </p>

@@ -4,10 +4,6 @@
 			<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
 				<form id="pendaftaran_lomba_kelompok" class="needs-validation" novalidate>
 					<h2 class="section-title text-center">Form Pendaftaran Lomba</h2>
-					<div class="wadah_gambar">
-						<!-- <img src="<?= base_url(); ?>/assets/images/uiux.jpg" class="img-fluid rounded mx-auto d-block my-3" alt="uiux.jpg"> -->
-					</div>
-					<p class="lead text-center deskripsi_pendaftaran"></p>
 					<div class="space40"></div>
 
 					<div class="form-group">

@@ -57,8 +57,8 @@ class Email extends MY_Controller
         $this->email->set_mailtype('html');
 
         $this->email->message($this->load->view($this->_path . 'email', [
-            'judul' => 'Vocation Of The Champions'
-            'lomba' => $this->input->post('id_lomba');
+            'judul' => 'Vocation Of The Champions',
+            'lomba' => $this->input->post('id_lomba')
         ], true));
         // $this->email->message('test');
 

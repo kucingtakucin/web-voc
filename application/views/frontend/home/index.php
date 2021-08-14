@@ -47,7 +47,7 @@
 		</div>
 		<div class="space60"></div>
 		<div class="grid-view">
-			<div class="carousel owl-carousel" data-loop="true" data-margin="30" data-dots="true" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "4"}}'>
+			<div class="carousel owl-carousel" data-loop="true" data-margin="30" data-dots="true" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "3"}}'>
 				<?php foreach ($lomba as $item) : ?>
 					<div class="item">
 						<div class="card">
@@ -76,7 +76,7 @@
 			<h2 style="font-size: 25px;" class="color-gray text-center">Sponsor</h2>
 		</div>
 		<div class="space80"></div>
-		<div class="carousel owl-carousel clients" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1140":{"items": "6"}}'>
+		<div class="carousel owl-carousel clients" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "3"}, "992":{"items": "4"}, "1140":{"items": "5"}}'>
 			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z1.svg" alt="" /></div>
 			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z2.svg" alt="" /></div>
 			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z3.svg" alt="" /></div>

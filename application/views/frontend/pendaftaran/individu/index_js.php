@@ -1,75 +1,125 @@
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('#namaketua').on('input', function() {
-			var firstName = $(this).val();
-			var validName = /^[a-zA-Z ]*$/;
-			if (firstName.length == 0) {
-				$('.msg-err-namaketua').addClass('invalid-msg').text("Harap diisi!!");
-				$(this).addClass('is-invalid').removeClass('is-valid');
+	let anggota, maks_anggota, status_ml, status_pubg;
+	const BASE_URL = "<?= base_url($uri_segment) ?>"
 
-			} else if (!validName.test(firstName)) {
-				$('.msg-err-namaketua').addClass('invalid-msg').text('hanya karakter dan spasi');
-				$(this).addClass('is-invalid').removeClass('is-valid');
+	$(() => {
+		bsCustomFileInput.init()
 
-			} else {
-				$('.msg-err-namaketua').empty();
-				$(this).addClass('is-valid').removeClass('is-invalid');
+		// Select lomba
+		fetch(BASE_URL + 'get_lomba_individu')
+			.then(response => {
+				if (response.ok) {
+					return response.json()
+				}
+				throw new Error(response.statusText)
+			})
+			.then(response => {
+				let html = '<option></option>'
+				response.data.map(item => {
+					html += `
+						<option value="${item.id}" 
+							data-opening="${item.opening}" 
+							data-closing="${item.closing}"
+							data-maks_anggota="${item.maks_anggota}"
+						>${item.nama_lomba}</option>
+					`
+				})
+				$('select.lomba').html(html)
+			})
+			.catch(error => {
+				console.error(error);
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Something went wrong!',
+					showConfirmButton: false,
+					timer: 1500
+				})
+			})
+
+		$('select.lomba').change(function(event) {
+			if (Date.now() < Date.parse($(this).find(':selected').data('opening'))) {
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Maaf, lomba ini belum membuka pendaftaran!',
+					showConfirmButton: false,
+					timer: 1500
+				})
+				$(this).val(null).change()
 			}
-		});
-		$('#emailketua').on('input', function() {
-			var emailAddress = $(this).val();
-			var validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-			if (emailAddress.length == 0) {
-				$('.msg-err-emailketua').addClass('invalid-msg').text('Email wajib diisi');
-				$(this).addClass('is-invalid').removeClass('is-valid');
-			} else if (!validEmail.test(emailAddress)) {
-				$('.msg-err-emailketua').addClass('invalid-msg').text('Alamat email tidak valid');
-				$(this).addClass('is-invalid').removeClass('is-valid');
-			} else {
-				$('.msg-err-emailketua').empty();
-				$(this).addClass('is-valid').removeClass('is-invalid');
+			if (Date.now() > Date.parse($(this).find(':selected').data('closing'))) {
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Maaf, pendaftaran untuk lomba ini sudah ditutup!',
+					showConfirmButton: false,
+					timer: 1500
+				})
+				$(this).val(null).change()
 			}
-		});
-		$('#nomorketua').on('input', function() {
-			var nomorKetua = $(this).val();
-			var rules = /^[0-9]*$/;
-			if (nomorKetua.length == 0) {
-				$('.msg-err-nomorketua').addClass('invalid-msg').text("Harap diisi!!");
-				$(this).addClass('is-invalid').removeClass('is-valid');
+		})
 
-			} else if (!rules.test(nomorKetua)) {
-				$('.msg-err-nomorketua').addClass('invalid-msg').text('hanya angka');
-				$(this).addClass('is-invalid').removeClass('is-valid');
+		const daftar_lomba_individu = (form) => {
+			Swal.fire({
+				title: 'Apakah kamu yakin untuk mendaftar?',
+				text: "Pastikan data yang terisi sudah benar!",
+				icon: 'warning',
+				showCancelButton: true,
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Ya!'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					Swal.fire({
+						title: 'Loading...',
+						allowEscapeKey: false,
+						allowOutsideClick: false,
+						didOpen: () => {
+							Swal.showLoading();
+						}
+					})
 
-			} else if (nomorKetua.length > 13) {
-				$('.msg-err-nomorketua').addClass('invalid-msg').text("Nomor harus kurang dari 13 digit");
-				$(this).addClass('is-invalid').removeClass('is-valid');
-			} else {
-				$('.msg-err-nomorketua').empty();
-				$(this).addClass('is-valid').removeClass('is-invalid');
-			}
-		});
-		$('#instansi').on('input', function() {
-			var instansi = $(this).val();
-			var rules = /^[a-zA-Z ]*$/;
-			if (instansi.length == 0) {
-				$('.msg-err-instansi').addClass('invalid-msg').text("Harap diisi!!");
-				$(this).addClass('is-invalid').removeClass('is-valid');
-			} else if (!rules.test(instansi)) {
-				$('.msg-err-instansi').addClass('invalid-msg').text('hanya karakter dan spasi');
-				$(this).addClass('is-invalid').removeClass('is-valid');
+					let formData = new FormData(form);
+					fetch(BASE_URL + 'daftar_individu', {
+						method: 'POST',
+						body: formData
+					}).then(response => {
+						$('#pendaftaran_lomba_individu button[type=submit]').hide();
+						$('#pendaftaran_lomba_individu button.loader').show();
+						if (response.ok) return response.json()
+						throw new Error(response.statusText)
+					}).then(response => {
+						Swal.fire({
+							icon: 'success',
+							title: 'Success!',
+							text: response.message,
+						})
+					}).catch(error => {
+						console.log(error);
+						Swal.fire({
+							icon: 'error',
+							title: 'Oops...',
+							html: "Ada masalah saat melakukan pendaftaran! Sepertinya ukuran file kamu terlalu besar. Maks <b>10MB</b>",
+						})
+					}).finally(() => {
+						$('#pendaftaran_lomba_individu button[type=submit]').show();
+						$('#pendaftaran_lomba_individu button.loader').hide();
+						$('#pendaftaran_lomba_individu').trigger('reset');
+						$('#pendaftaran_lomba_individu select').val(null).trigger('change')
+						$('#pendaftaran_lomba_individu').removeClass('was-validated')
+						$('.wadah_anggota').html('')
+						$('#increment').val(null)
+						maks_anggota = 0;
+						anggota = 0;
+					})
+				}
+			})
+		}
 
-			} else {
-				$('.msg-err-instansi').empty();
-				$(this).addClass('is-valid').removeClass('is-invalid');
-			}
-		});
-		$('input').on('input', function(e) {
-			if ($('#form').find('.is-valid').length == 5) {
-				$('#submit-btn').removeAttr('disabled');
-			} else {
-				e.preventDefault();
-				$('#submit-btn').attr('disabled');
+		$('#pendaftaran_lomba_individu').submit(function(event) {
+			event.preventDefault()
+			if (this.checkValidity()) {
+				daftar_lomba_individu(this);
 			}
 		});
 	});

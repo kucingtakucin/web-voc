@@ -45,7 +45,7 @@ class Peserta extends MY_Controller
         $this->datatables->setOrder(['a.id' => 'desc']);
         $this->datatables->generateTable(function () {
             $this->db->select('a.*, b.nama nama_tim, c.nama_lomba')
-                ->join('tim b', 'b.id = a.id_tim')
+                ->join('tim b', 'b.id = a.id_tim', 'left')
                 ->join('lomba c', 'c.id = a.id_lomba');
             $this->db->where('a.is_active', '1');
 
@@ -64,7 +64,7 @@ class Peserta extends MY_Controller
                     $this->db->where('a.is_ketua', '1');
                     break;
                 case 'solo':
-                    $this->db->where('a.is_ketua IS NULL');
+                    $this->db->where('a.is_ketua IS NULL AND a.id_tim IS NULL');
                     break;
                 default:
                     break;

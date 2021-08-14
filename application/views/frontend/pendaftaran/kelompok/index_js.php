@@ -60,6 +60,7 @@
 					showConfirmButton: false,
 					timer: 1500
 				})
+				$(this).val(null).change()
 			}
 
 			if ($(this).val() == '1' || $(this).val() == '2') {
