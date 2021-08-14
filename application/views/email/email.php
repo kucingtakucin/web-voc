@@ -76,7 +76,7 @@
 																<a href="wa.me/6289666441497" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 3: ?>
-																<a href="wa.me/6285725658003" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
+																<a href="wa.me/62895376663829" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 4: ?>
 																<a href="wa.me/6285741675770" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
