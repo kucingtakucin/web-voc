@@ -65,7 +65,7 @@
 											<tr>
 												<td style="padding: 30px">
 													<p>Salam Inlander, <?= $nama ?></p>
-													<p>Anda telah terdaftar menjadi peserta lomba Vocational Of The Champions.
+													<p>Anda telah terdaftar menjadi peserta lomba Vocation Of The Champions.
 														Bila Anda mengalami kesulitan atau memiliki pertanyaan selama proses keberlangsungan lomba, Anda dapat bertanya di Forum Diskusi yang telah kami sediakan</p>
 													<center>
 														<?php switch ($lomba):
@@ -103,6 +103,12 @@
 																<a href="wa.me/6285291952575" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 17: ?>
+																<a href="wa.me/6282298941013" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
+															<?php break;
+															case 18: ?>
+																<a href="wa.me/6285770493243" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
+															<?php break;
+															case 19: ?>
 																<a href="wa.me/6281804083602" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 														<?php
 															default:
@@ -112,7 +118,7 @@
 													</center>
 													<!-- <a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a> -->
 													<p>Selamat berlomba! </p>
-													<p style="margin-bottom: 0">Vocational Of The Champions</p>
+													<p style="margin-bottom: 0">Vocation Of The Champions</p>
 												</td>
 											</tr>
 										</tbody>
