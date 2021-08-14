@@ -70,41 +70,47 @@
 													<center>
 														<?php switch ($lomba):
 															case 1: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6285866572765" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 2: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6289666441497" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 3: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6285725658003" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 4: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6285741675770" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 5: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6285877555208" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 6: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/62895377205773" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 7: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6282298941013" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 8: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6285770493243" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 9: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6289512056590" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 															<?php break;
 															case 11: ?>
-																<a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a>
+																<a href="wa.me/6285726904162" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
+															<?php break;
+															case 16: ?>
+																<a href="wa.me/6285291952575" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
+															<?php break;
+															case 17: ?>
+																<a href="wa.me/6281804083602" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a>
 														<?php
 															default:
 																# code...
 																break;
 														endswitch ?>
 													</center>
-													<!-- <a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Join To Group </a> -->
+													<!-- <a href="#" style="padding: 10px; background-color: #7366ff; color: #fff; display: inline-block; border-radius: 4px; margin-bottom: 18px">Hubungi CP </a> -->
 													<p>Selamat berlomba! </p>
 													<p style="margin-bottom: 0">Vocational Of The Champions</p>
 												</td>
