@@ -59,6 +59,15 @@
 				})
 				$(this).val(null).change()
 			}
+
+			if ($(this).val() == '11') {
+				$('#unggah_karya').prop('required', false)
+				$('.unggah_karya').fadeOut(750)
+			} else {
+				$('.unggah_karya').fadeIn(750)
+				$('#unggah_karya').prop('required', true)
+			}
+
 		})
 
 		const daftar_lomba_individu = (form) => {

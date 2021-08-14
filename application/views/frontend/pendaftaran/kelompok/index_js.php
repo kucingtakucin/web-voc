@@ -63,6 +63,15 @@
 				$(this).val(null).change()
 			}
 
+			// 7 Tari Tradisional
+			// 8 Tari Modern
+			// 4 Video Kreatif
+			if ($(this).val() == '7' || $(this).val() == '8' || $(this).val() == '4') {
+				$('#unggah_karya_kelompok').html('Unggah Berkas Pendaftaran')
+			} else {
+				$('#unggah_karya_kelompok').html('Unggah Karya')
+			}
+
 			if ($(this).val() == '1' || $(this).val() == '2') {
 				$('#unggah_karya').prop('required', false)
 				$('.unggah_karya').fadeOut(750)

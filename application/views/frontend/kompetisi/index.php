@@ -52,7 +52,7 @@
 		</center>
 		<div class="space30"></div>
 		<div class="text-center">
-			<a href="#" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Unduh Panduan</a>
+			<a href="https://drive.google.com/drive/folders/1eQnezJOETeObr8E-Lg8n8_mjH4_gw_XV" class="btn btn-primary" style="width: min-content; margin-bottom: 30px">Unduh Panduan</a>
 		</div>
 		<!-- <div class="row">
 			<div class="col-lg-4">

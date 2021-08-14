@@ -97,7 +97,7 @@
 					</div>
 
 					<div class="form-group unggah_karya">
-						<h6>Unggah Karya</h6>
+						<h6 id="unggah_karya_kelompok">Unggah Karya dan Berkas Pendaftaran</h6>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon0000">Upload</span>

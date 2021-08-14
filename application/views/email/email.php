@@ -55,7 +55,7 @@
 									<table style="width: 650px; margin: 0 auto; margin-bottom: 30px">
 										<tbody>
 											<tr>
-												<td><img src="https://appt.demoo.id/tema/cuba/html/assets/images/cuba-logo1.png" alt=""></td>
+												<td><img src="https://appt.demoo.id/omahan/voc/assets/images/logo-03.png" width="75" alt="VOC"></td>
 												<td style="text-align: right; color:#999"><span><?= $judul ?></span></td>
 											</tr>
 										</tbody>
