@@ -64,7 +64,7 @@
 										<tbody>
 											<tr>
 												<td style="padding: 30px">
-													<p>Salam Inlander, Nama Ketua</p>
+													<p>Salam Inlander, <?= $nama ?></p>
 													<p>Anda telah terdaftar menjadi peserta lomba Vocational Of The Champions.
 														Bila Anda mengalami kesulitan atau memiliki pertanyaan selama proses keberlangsungan lomba, Anda dapat bertanya di Forum Diskusi yang telah kami sediakan</p>
 													<center>
