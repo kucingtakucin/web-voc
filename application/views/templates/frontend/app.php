@@ -6,6 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/logo-03.png">
 	<title><?= sistem()->nama ?></title>
+	<meta name="description" content="VOC adalah singkatan dari Vocation Of The Champions. Dimana VOC ini merupakan
+						perlombaan untuk mahasiswa/i Vokasi dan siswa/i SMA/SMK/sederajat Se-Indonesia dengan berbagai cabang
+						lomba, diantaranya Seni, Olahraga dan Penalaran.">
+	<meta name="keywords" content="voc, vokasi, universitas, sma, smk, siswa, siswi, mahasiswa, mahasiswi">
+	<meta name="author" content="Admin VOC">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/plugins.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/revolution/css/settings.css">
@@ -25,9 +30,11 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/type/type.css"> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/style2.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/gaya2.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/color/purple.css">
+	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/color/purple.css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/font/font2.css">
+	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/font/font2.css">
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <style>
 	.jumbotron {
@@ -165,7 +172,7 @@
 	<?php $this->load->view($script) ?>
 	<script>
 		$(document).ready(function() {
-			$('.preloader-container').fadeOut(500)
+			$('.preloader-container').fadeOut(1000)
 
 			$('.live').click(function() {
 				Swal.fire({
@@ -182,15 +189,16 @@
 					icon: "info"
 				});
 			})
+
+			let width = $('.g-recaptcha').parent().width();
+			if (width < 302) {
+				let scale = width / 302;
+				$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+				$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+				$('.g-recaptcha').css('transform-origin', '0 0');
+				$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+			}
 		})
-
-		// document.querySelector(".live").addEventListener('click', function() {
-		// 	Swal.fire("Hi Sobat Deandels", "Sabar ya Live belum dimulai untuk saat ini", "info");
-		// });
-
-		// document.querySelector(".klasemen").addEventListener('click', function() {
-		// 	Swal.fire("Hi Sobat Deandels", "Sabar ya Kompetisi belum dimulai lagi", "info");
-		// });
 	</script>
 </body>
 

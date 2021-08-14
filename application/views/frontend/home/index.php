@@ -11,7 +11,7 @@
 			<div class="col-md-12">
 				<center>
 					<p class="text-center" style="font-size: 20px; color:#9d5845; width: 75%">VOC singkatan dari <b>Vocation Of The Champions.</b> Dimana VOC ini merupakan
-						perlombaan untuk mahasiswa/i Vokasi Se-Indonesia dengan berbagai cabang
+						perlombaan untuk mahasiswa/i Vokasi dan siswa/i SMA/SMK/sederajat Se-Indonesia dengan berbagai cabang
 						lomba, diantaranya Seni, Olahraga dan Penalaran.
 					</p>
 				</center>
@@ -77,14 +77,14 @@
 		</div>
 		<div class="space80"></div>
 		<div class="carousel owl-carousel clients" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "3"}, "992":{"items": "4"}, "1140":{"items": "5"}}'>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z1.svg" alt="" /></div>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z2.svg" alt="" /></div>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z3.svg" alt="" /></div>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z4.svg" alt="" /></div>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z5.svg" alt="" /></div>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z6.svg" alt="" /></div>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z7.svg" alt="" /></div>
-			<div class="item pl-15 pr-15"><img src="<?= base_url() ?>assets/snowlake/images/art/z8.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z1.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z2.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z3.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z4.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z5.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z6.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z7.svg" alt="" /></div>
+			<div class="item pl-15 pr-15"><img src="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/images/art/z8.svg" alt="" /></div>
 		</div>
 		<!-- /.owl-carousel -->
 	</div>

@@ -6,11 +6,11 @@
 				<div class="widget">
 					<h3 style="font-size: 30px;" class="widget-title font-weight-bold">PETA SITUS</h3>
 					<ul class="list-unstyled" style=" font-weight: normal;">
-						<li><a href="#" class="text-white">Beranda</a></li>
-						<li><a href="#" class="text-white">Kompetisi</a></li>
+						<li><a href="<?= base_url('beranda') ?>" class="text-white">Beranda</a></li>
+						<li><a href="#<?= base_url('kompetisi') ?>" class="text-white">Kompetisi</a></li>
 						<li><a href="#" class="text-white">Live Streaming</a></li>
 						<li><a href="#" class="text-white">Klasemen</a></li>
-						<li><a href="#" class="text-white">Pendaftaran</a></li>
+						<li><a href="<?= base_url('pendaftaran') ?>" class="text-white">Pendaftaran</a></li>
 					</ul>
 				</div>
 				<!-- /.widget -->
@@ -33,13 +33,13 @@
 						<h5 style=" font-weight: normal;" class="">Telepon</h5>
 					</div>
 					<ul class="list-unstyled" style="font-family: poppins; font-weight: normal;">
-						<li><a href="#" class="text-white">081325416875 (CP)</a></li>
+						<li><a href="https://wa.me/081325416875" class="text-white">081325416875 (CP)</a></li>
 					</ul>
 					<div class="pembungkus">
 						<h5 style=" font-weight: normal;" class="">Email</h5>
 					</div>
 					<ul class="list-unstyled">
-						<li><a href="http://vocationofthechampions@gmail.com/" class="text-white">vocationofthechampions@gmail.com</a></li>
+						<li><a href="mailto:vocationofthechampions@gmail.com" class="text-white">vocationofthechampions@gmail.com</a></li>
 					</ul>
 				</div>
 				<!-- /.widget -->

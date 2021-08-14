@@ -77,6 +77,10 @@ class Pendaftaran extends MY_Controller
 
     public function daftar_individu()
     {
+        $recaptcha = new \ReCaptcha\ReCaptcha('6Le8qtUbAAAAAA0Iu8Z3yGM_AXwTPILtfUrDWMqL');
+        $resp = $recaptcha->setExpectedHostname('appt.demoo.id')
+            ->verify($this->input->post('g-recaptcha-response'));
+
         $this->upload->initialize([
             'upload_path' => './uploads/peserta/',
             'allowed_types' => 'jpg|jpeg|png|pdf|zip|rar',
@@ -168,6 +172,10 @@ class Pendaftaran extends MY_Controller
 
     public function daftar_kelompok()
     {
+        $recaptcha = new \ReCaptcha\ReCaptcha('6Le8qtUbAAAAAA0Iu8Z3yGM_AXwTPILtfUrDWMqL');
+        $resp = $recaptcha->setExpectedHostname('appt.demoo.id')
+            ->verify($this->input->post('g-recaptcha-response'));
+
         $this->upload->initialize([
             'upload_path' => './uploads/peserta/',
             'allowed_types' => 'jpg|jpeg|png|pdf|zip|rar',

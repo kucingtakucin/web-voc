@@ -1,6 +1,9 @@
 <div class="login-card">
     <div>
-        <div><a class="logo text-left" href="index.html"><img class="img-fluid for-light" src="<?= base_url() ?>assets/cuba/images/logo/login.png" alt="looginpage"><img class="img-fluid for-dark" src="<?= base_url() ?>assets/cuba/images/logo/logo_dark.png" alt="looginpage"></a></div>
+        <div><a class="logo text-left" href="<?= base_url('beranda') ?>">
+                <img class="img-fluid for-light" src="<?= base_url() ?>assets/images/logo-03.png" width="60" alt="looginpage">
+            </a>
+        </div>
         <div class="login-main">
             <div id="infoMessage" class="text-danger mb-3"><?php echo $message; ?></div>
 

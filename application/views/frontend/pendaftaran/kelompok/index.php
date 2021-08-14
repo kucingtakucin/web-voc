@@ -116,6 +116,12 @@
 					<hr>
 					<!-- ================================================== -->
 					<div class="wadah_anggota"></div>
+
+					<div class="form-group">
+						<div class="g-recaptcha" data-sitekey="6Le8qtUbAAAAAPrJIr8Tw-hy-9rqgTZw3x7PD1VU"></div>
+						<div class="invalid-feedback text-danger">recaptcha required</div>
+						<div class="valid-feedback text-success">Looks good</div>
+					</div>
 					<button type="button" id="tambah_anggota" class="btn btn-primary">Tambah Anggota</button>
 					<button type="button" id="kurangi_anggota" class="btn btn-danger">Kurangi Anggota</button>
 

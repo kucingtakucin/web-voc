@@ -4,7 +4,6 @@
         <div class="mobile-back text-right"><span>Back</span><i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
     </li>
     <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'dashboard') ?>" href="<?= base_admin('dashboard') ?>"><i data-feather="home"></i><span>Dashboard</span></a></li>
-    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'mahasiswa') ?>" href="<?= base_admin('mahasiswa') ?>"><i data-feather="book-open"></i><span>Mahasiswa</span></a></li>
     <li class="sidebar-main-title">
         <div>
             <h6>Data</h6>

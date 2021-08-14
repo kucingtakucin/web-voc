@@ -5,11 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="https://appt.demoo.id/tema/cuba/html/assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="https://appt.demoo.id/tema/cuba/html/assets/images/favicon.png" type="image/x-icon">
+    <meta name="description" content="VOC adalah singkatan dari Vocation Of The Champions. Dimana VOC ini merupakan
+						perlombaan untuk mahasiswa/i Vokasi dan siswa/i SMA/SMK/sederajat Se-Indonesia dengan berbagai cabang
+						lomba, diantaranya Seni, Olahraga dan Penalaran.">
+    <meta name="keywords" content="voc, vokasi, universitas, sma, smk, siswa, siswi, mahasiswa, mahasiswi">
+    <meta name="author" content="Admin VOC">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/logo-03.png">
     <title><?= sistem()->nama ?> | <?= $title ?></title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
@@ -59,7 +60,7 @@
         <div class="page-header">
             <div class="header-wrapper row m-0">
                 <div class="header-logo-wrapper col-1">
-                    <div class="logo-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" src="https://appt.demoo.id/tema/cuba/html/assets/images/logo/logo.png" alt=""></a></div>
+                    <div class="logo-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" src="<?= base_url() ?>assets/images/logo-03.png" alt=""></a></div>
                     <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="grid" id="sidebar-toggle"> </i></div>
                 </div>
                 <div class="nav-right col-11 pull-right right-header p-0">
@@ -85,8 +86,8 @@
         <div class="page-body-wrapper horizontal-menu">
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper">
-                <div class="logo-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" src="https://appt.demoo.id/tema/cuba/html/assets/images/logo/logo.png" alt=""></a></div>
-                <div class="logo-icon-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" src="https://appt.demoo.id/tema/cuba/html/assets/images/logo/logo-icon.png" alt=""></a></div>
+                <div class="logo-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" width="50" src="<?= base_url() ?>assets/images/logo-03.png" alt="" </a></div>
+                <div class="logo-icon-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" width="50" src="<?= base_url() ?>assets/images/logo-03.png" alt=""></a></div>
                 <nav>
                     <div class="sidebar-main">
                         <div id="sidebar-menu">
@@ -141,7 +142,7 @@
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/icons/feather-icon/feather.min.js"></script>
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/icons/feather-icon/feather-icon.js"></script>
     <!-- Sidebar jquery-->
-    <script src="<?= base_url() ?>assets/cuba/js/sidebar-menu.js"></script>
+    <script src="https://appt.demoo.id/tema/cuba/html/assets/js/sidebar-menu.js"></script>
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/config.js"></script>
     <!-- Plugins JS start-->
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/clipboard/clipboard.min.js"></script>
@@ -157,12 +158,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
     <!-- Theme js-->
-    <script src="<?= base_url() ?>assets/cuba/js/script.js"></script>
+    <script src="https://appt.demoo.id/tema/cuba/html/assets/js/script.js"></script>
     <!-- login js-->
     <!-- Plugin used-->
     <script>
         $(document).ready(function() {
-            $('.preloader-container').fadeOut(500)
+            $('.preloader-container').fadeOut(1000)
         })
     </script>
     <?php $this->load->view($script) ?>
