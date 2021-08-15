@@ -55,6 +55,7 @@ $route['kompetisi'] = 'frontend/kompetisi';
 $route['pendaftaran/individu'] = 'frontend/pendaftaran/individu';
 $route['pendaftaran/kelompok'] = 'frontend/pendaftaran/kelompok';
 $route['pendaftaran'] = 'frontend/pendaftaran/index';
+$route['logs'] = "LogViewer/index";
 
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';

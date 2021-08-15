@@ -4,13 +4,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-	<meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
-	<meta name="author" content="pixelstrap">
-	<link rel="icon" href="https://appt.demoo.id/tema/cuba/html/assets/images/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="https://appt.demoo.id/tema/cuba/html/assets/images/favicon.png" type="image/x-icon">
-	<title>Cuba - Premium Admin Template</title>
+	<meta name="description" content="VOC adalah singkatan dari Vocation Of The Champions. Dimana VOC ini merupakan
+						perlombaan untuk mahasiswa/i Vokasi dan siswa/i SMA/SMK/sederajat Se-Indonesia dengan berbagai cabang
+						lomba, diantaranya Seni, Olahraga dan Penalaran.">
+	<meta name="keywords" content="voc, vokasi, universitas, sma, smk, siswa, siswi, mahasiswa, mahasiswi">
+	<meta name="author" content="Admin VOC">
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/logo-03.png">
+	<title>Vocation Of The Champions</title>
 	<!-- Google font-->
 	<link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
