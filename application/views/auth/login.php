@@ -7,17 +7,21 @@
         <div class="login-main">
             <div id="infoMessage" class="text-danger mb-3"><?php echo $message; ?></div>
 
-            <form class="theme-form" id="form-login" method="post" action="<?= base_url('auth/login') ?>">
+            <form class="theme-form needs-validation" novalidate id="form-login" method="post" action="<?= base_url('auth/login') ?>">
                 <h4>Login</h4>
                 <p>Enter your username & password to login</p>
                 <div class="form-group">
                     <label class="col-form-label" for="identity">Username</label>
-                    <input class="form-control" id="identity" name="identity" type="text">
+                    <input class="form-control" required id="identity" name="identity" type="text">
+                    <div class="invalid-tooltip">Username required</div>
+                    <div class="valid-tooltip">Looks good</div>
                 </div>
                 <div class="form-group">
                     <label class="col-form-label" for="password">Password</label>
-                    <input class="form-control" type="password" id="password" name="password">
+                    <input class="form-control" required type="password" id="password" name="password">
                     <div class="show-hide"><span class="show"> </span></div>
+                    <div class="invalid-tooltip">Password required</div>
+                    <div class="valid-tooltip">Looks good</div>
                 </div>
                 <div class="form-group">
                     <div class="g-recaptcha" data-sitekey="6Le8qtUbAAAAAPrJIr8Tw-hy-9rqgTZw3x7PD1VU"></div>

@@ -63,11 +63,13 @@
 
         <div class="row">
             <div class="col-md-12">
-                <table id="table_data" class="table table-striped table-hover">
-                    <thead>
-                    </thead>
-                    <tbody id="table_body"></tbody>
-                </table>
+                <div class="table-responsive">
+                    <table id="table_data" class="table table-striped table-hover">
+                        <thead>
+                        </thead>
+                        <tbody id="table_body"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

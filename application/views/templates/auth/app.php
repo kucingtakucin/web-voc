@@ -70,6 +70,8 @@
         <!-- Plugins JS start-->
         <!-- Plugins JS Ends-->
         <!-- Theme js-->
+        <script src="https://appt.demoo.id/tema/cuba/html/assets/js/form-validation-custom.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://appt.demoo.id/tema/cuba/html/assets/js/script.js"></script>
         <!-- login js-->
         <script>

@@ -3,28 +3,28 @@
     <li class="back-btn">
         <div class="mobile-back text-right"><span>Back</span><i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
     </li>
-    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'dashboard') ?>" href="<?= base_admin('dashboard') ?>"><i data-feather="home"></i><span>Dashboard</span></a></li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(2, 'dashboard') ?>" href="<?= base_admin('dashboard') ?>"><i data-feather="home"></i><span>Dashboard</span></a></li>
     <li class="sidebar-main-title">
         <div>
             <h6>Data</h6>
         </div>
     </li>
-    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'peserta') ?>" href="<?= base_admin('peserta') ?>"><i data-feather="user"></i><span>Peserta</span></a></li>
-    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'tim') ?>" href="<?= base_admin('tim') ?>"><i data-feather="users"></i><span>Tim</span></a></li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(2, 'peserta') ?>" href="<?= base_admin('peserta') ?>"><i data-feather="user"></i><span>Peserta</span></a></li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(2, 'tim') ?>" href="<?= base_admin('tim') ?>"><i data-feather="users"></i><span>Tim</span></a></li>
 
     <li class="sidebar-main-title">
         <div>
             <h6>Referensi</h6>
         </div>
     </li>
-    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'lomba') ?>" href="<?= base_admin('lomba') ?>"><i data-feather="star"></i><span>Lomba</span></a></li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(2, 'lomba') ?>" href="<?= base_admin('lomba') ?>"><i data-feather="star"></i><span>Lomba</span></a></li>
 
     <li class="sidebar-main-title">
         <div>
             <h6>Manajemen</h6>
         </div>
     </li>
-    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(3, 'user') ?>" href="<?= base_auth() ?>"><i data-feather="users"></i><span>User</span></a></li>
+    <li class="sidebar-list"><a class="nav-link sidebar-title sidebar-link <?= sidebar_active(2, 'user') ?>" href="<?= base_auth() ?>"><i data-feather="users"></i><span>User</span></a></li>
 <?php endif ?>
 
 <!-- Sidebar ... -->

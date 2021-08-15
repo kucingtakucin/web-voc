@@ -90,7 +90,13 @@ class Auth extends CI_Controller
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 
 				// redirect to ...
-				redirect(redirect_to(), 'refresh');
+				// redirect(redirect_to(), 'refresh');
+				return $this->output->set_content_type('application/json')
+					->set_output(json_encode([
+						'status' => true,
+						'message' => 'Login Berhasil!',
+						'redirect' => redirect_to()
+					]));
 			} else {
 				// if the login was un-successful
 				// redirect them back to the login page
