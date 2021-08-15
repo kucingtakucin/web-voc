@@ -3,6 +3,15 @@
 	const BASE_URL = "<?= base_url($uri_segment) ?>"
 
 	$(() => {
+		<?php if ($is_mobile) : ?>
+			Swal.fire({
+				icon: 'info',
+				title: 'Perhatian',
+				text: 'Disarankan untuk menggunakan akses desktop',
+				timer: false,
+				showConfirmButton: true,
+			})
+		<?php endif; ?>
 
 		bsCustomFileInput.init()
 
@@ -108,11 +117,19 @@
 						if (response.ok) return response.json()
 						throw new Error(response.statusText)
 					}).then(response => {
-						Swal.fire({
-							icon: 'success',
-							title: 'Success!',
-							text: response.message,
-						})
+						if (response.status) {
+							Swal.fire({
+								icon: 'success',
+								title: 'Success!',
+								text: response.message,
+							})
+						} else {
+							Swal.fire({
+								icon: 'error',
+								title: 'Oops...',
+								html: response.message,
+							})
+						}
 					}).catch(error => {
 						console.log(error);
 						Swal.fire({

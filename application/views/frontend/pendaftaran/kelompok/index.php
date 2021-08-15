@@ -68,6 +68,7 @@
 
 					<div class="form-group">
 						<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar Ketua</h6>
+						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon00">Upload</span>
@@ -83,6 +84,7 @@
 
 					<div class="form-group">
 						<h6>Bukti Transfer</h6>
+						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon000">Upload</span>
@@ -98,6 +100,7 @@
 
 					<div class="form-group unggah_karya">
 						<h6 id="unggah_karya_kelompok">Unggah Karya dan Berkas Pendaftaran</h6>
+						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon0000">Upload</span>

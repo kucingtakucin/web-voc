@@ -3,6 +3,16 @@
 	const BASE_URL = "<?= base_url($uri_segment) ?>"
 
 	$(() => {
+		<?php if ($is_mobile) : ?>
+			Swal.fire({
+				icon: 'info',
+				title: 'Perhatian',
+				text: 'Disarankan untuk menggunakan akses desktop',
+				timer: false,
+				showConfirmButton: true,
+			})
+		<?php endif; ?>
+
 		bsCustomFileInput.init()
 
 		// Select lomba
@@ -183,7 +193,8 @@
 			}
 
 			html += `<div class="form-group">
-					<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar Anggota ${anggota}</h6>
+						<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar Anggota ${anggota}</h6>
+						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -266,11 +277,19 @@
 						if (response.ok) return response.json()
 						throw new Error(response.statusText)
 					}).then(response => {
-						Swal.fire({
-							icon: 'success',
-							title: 'Success!',
-							text: response.message,
-						})
+						if (response.status) {
+							Swal.fire({
+								icon: 'success',
+								title: 'Success!',
+								text: response.message,
+							})
+						} else {
+							Swal.fire({
+								icon: 'error',
+								title: 'Oops...',
+								html: response.message,
+							})
+						}
 					}).catch(error => {
 						console.log(error);
 						Swal.fire({
