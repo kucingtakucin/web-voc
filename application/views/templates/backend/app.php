@@ -142,7 +142,8 @@
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/icons/feather-icon/feather.min.js"></script>
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/icons/feather-icon/feather-icon.js"></script>
     <!-- Sidebar jquery-->
-    <script src="https://appt.demoo.id/tema/cuba/html/assets/js/sidebar-menu.js"></script>
+    <!-- <script src="https://appt.demoo.id/tema/cuba/html/assets/js/sidebar-menu.js"></script> -->
+    <script src="<?= base_url() ?>assets/cuba/js/sidebar-menu.js"></script>
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/config.js"></script>
     <!-- Plugins JS start-->
     <script src="https://appt.demoo.id/tema/cuba/html/assets/js/clipboard/clipboard.min.js"></script>
