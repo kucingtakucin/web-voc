@@ -17,13 +17,14 @@
 		"dompdf/dompdf": "^1.0",
 		"league/glide": "^2.0",
 		"google/recaptcha": "^1.2",
-		"guzzlehttp/guzzle": "^7.0"
+		"guzzlehttp/guzzle": "^7.0",
+		"seunmatt/codeigniter-log-viewer": "^1.1"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
 	},
 	"require-dev": {
-		"mikey179/vfsStream": "1.1.*",
+		"mikey179/vfsstream": "1.1.*",
 		"phpunit/phpunit": "4.* || 5.*"
 	}
 }
