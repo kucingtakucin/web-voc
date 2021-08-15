@@ -9,7 +9,7 @@
 						lomba, diantaranya Seni, Olahraga dan Penalaran.">
 	<meta name="keywords" content="voc, vokasi, universitas, sma, smk, siswa, siswi, mahasiswa, mahasiswi">
 	<meta name="author" content="Admin VOC">
-	<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/logo-03.png">
+	<link rel="shortcut icon" href="https://appt.demoo.id/omahan/voc/assets/images/logo-03.png">
 	<title>Vocation Of The Champions</title>
 	<!-- Google font-->
 	<link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
 				<div class="col-md-8 offset-md-2">
 					<p class="sub-content">The page you are attempting to reach is currently not available. This may be because the page does not exist or has been moved.</p>
 				</div>
-				<div><a class="btn btn-danger-gradien btn-lg" href="/">BACK TO HOME PAGE</a></div>
+				<div><a class="btn btn-danger-gradien btn-lg" href="https://bemsekolahvokasi.uns.ac.id/voc/">BACK TO HOME PAGE</a></div>
 			</div>
 		</div>
 		<!-- error-404 end      -->
