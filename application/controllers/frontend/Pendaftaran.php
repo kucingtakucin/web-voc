@@ -106,8 +106,7 @@ class Pendaftaran extends MY_Controller
 			'encrypt_name' => true,
 			'remove_spaces' => true
 		]);
-		//		var_dump($_FILES);
-		//		die;
+
 		$data_upload = [];
 		foreach ($_FILES as $key => $file) {        // Cek error
 			switch ($file['error']) {
@@ -139,12 +138,6 @@ class Pendaftaran extends MY_Controller
 
 		// Upload dokumen
 		foreach ($_FILES as $key => $file) {
-			if (($this->input->post('id_lomba') == '11') &&
-				$key == 'unggah_karya'
-			) {
-				$data_upload['unggah_karya'] = null;
-				continue; // Unggah karya di skip kalau lomba catur
-			}
 
 			if (!$this->upload->do_upload($key)) {
 				return $this->output->set_content_type('application/json')
@@ -163,6 +156,7 @@ class Pendaftaran extends MY_Controller
 				'nama' => $this->input->post('nama', true),
 				'email' => $this->input->post('email', true),
 				'no_hp' => $this->input->post('no_wa', true),
+				'asal_instansi' => $this->input->post('asal_instansi', true),
 				'is_ketua' => null,
 				'id_tim' => null,
 				'id_lomba' => $this->input->post('id_lomba', true),
@@ -171,7 +165,7 @@ class Pendaftaran extends MY_Controller
 				'unggah_karya' => $data_upload['unggah_karya'],
 				'is_active' => '1',
 				'created_at' => date('Y-m-d H:i:s'),
-				'created_by' => get_user_id(),
+				//				'created_by' => get_user_id(),
 			]
 		);
 
@@ -244,13 +238,6 @@ class Pendaftaran extends MY_Controller
 				}
 			}
 
-			if (($this->input->post('id_lomba') == '1' || $this->input->post('id_lomba') == '2') &&
-				$key == 'unggah_karya'
-			) {
-				$data_upload['unggah_karya'] = null;
-				continue; // Unggah karya di skip kalau lomba pubg atau ml
-			}
-
 			if (!$this->upload->do_upload($key)) {
 				return $this->output->set_content_type('application/json')
 					->set_output(json_encode([
@@ -265,11 +252,11 @@ class Pendaftaran extends MY_Controller
 		// Buat tim
 		$id_tim = $this->M_Tim->insert([
 			'nama' => $this->input->post('nama_tim', true),
-			'asal_instansi' => $this->input->post('asal_instansi', true),
+			//			'asal_instansi' => $this->input->post('asal_instansi', true),
 			'id_lomba' => $this->input->post('id_lomba', true),
 			'is_active' => '1',
 			'created_at' => date('Y-m-d H:i:s'),
-			'created_by' => get_user_id(),
+			//			'created_by' => get_user_id(),
 		]);
 
 		// Tambah ketua
@@ -278,6 +265,7 @@ class Pendaftaran extends MY_Controller
 				'nama' => $this->input->post('nama_ketua', true),
 				'email' => $this->input->post('email_ketua', true),
 				'no_hp' => $this->input->post('no_wa_ketua', true),
+				'asal_instansi' => $this->input->post('asal_instansi', true),
 				'is_ketua' => '1',
 				'id_tim' => $id_tim,
 				'id_lomba' => $this->input->post('id_lomba', true),
@@ -288,7 +276,7 @@ class Pendaftaran extends MY_Controller
 				'unggah_karya' => $data_upload['unggah_karya'],
 				'is_active' => '1',
 				'created_at' => date('Y-m-d H:i:s'),
-				'created_by' => get_user_id(),
+				//				'created_by' => get_user_id(),
 			]
 		);
 
@@ -308,6 +296,7 @@ class Pendaftaran extends MY_Controller
 					'nama' => $this->input->post("nama_anggota_$i", true),
 					'email' => $this->input->post("email_anggota_$i", true),
 					'no_hp' => $this->input->post("no_wa_anggota_$i", true),
+					'asal_instansi' => $this->input->post('asal_instansi', true),
 					'is_ketua' => '0',
 					'id_tim' => $id_tim,
 					'id_lomba' => $this->input->post("id_lomba", true),
@@ -318,7 +307,7 @@ class Pendaftaran extends MY_Controller
 					'unggah_karya' => null,
 					'is_active' => '1',
 					'created_at' => date('Y-m-d H:i:s'),
-					'created_by' => get_user_id(),
+					//					'created_by' => get_user_id(),
 				]
 			);
 		}

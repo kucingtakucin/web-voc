@@ -10,13 +10,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-md-12" for="nama_lengkap">Nama Lengkap</label>
+                                <label for="nama_lengkap">Nama Lengkap</label>
                                 <input type="text" id="nama_lengkap" class="form-control" name="nama_lengkap" disabled>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-md-12" for="email">Email</label>
+                                <label for="email">Email</label>
                                 <input type="email" id="email" class="form-control" name="email" disabled>
                             </div>
                         </div>
@@ -24,13 +24,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-md-12" for="no_hp">No WhatsApp</label>
+                                <label for="no_hp">No WhatsApp</label>
                                 <input type="number" id="no_hp" class="form-control" name="no_hp" disabled>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-md-12" for="status">Status</label>
+                                <label for="status">Status</label>
                                 <input type="text" id="status" class="form-control" name="status" disabled>
                             </div>
                         </div>
@@ -38,14 +38,22 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-md-12" for="id_lomba">Lomba</label>
+                                <label for="id_lomba">Lomba</label>
                                 <input type="text" id="id_lomba" class="form-control" name="id_lomba" disabled>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-md-12" for="id_tim">Tim</label>
+                                <label for="id_tim">Tim</label>
                                 <input type="text" id="id_tim" class="form-control" name="id_tim" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="asal_instansi">Asal Instansi</label>
+                                <input type="text" id="asal_instansi" class="form-control" name="asal_instansi" disabled>
                             </div>
                         </div>
                     </div>
@@ -86,7 +94,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <div class="col-md-12">Karya</div>
+                                <div class="col-md-12">Karya / Berkas Pendaftaran</div>
                                 <a href="#" target="_blank" id="download_karya" class="btn btn-primary">
                                     <i class="fa fa-download"></i>
                                     Unduh dokumen

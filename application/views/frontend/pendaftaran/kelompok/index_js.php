@@ -73,18 +73,13 @@
 				$(this).val(null).change()
 			}
 
-			// 7 Tari Tradisional
-			// 8 Tari Modern
-			// 4 Video Kreatif
-			if ($(this).val() == '7' || $(this).val() == '8' || $(this).val() == '4') {
+			if ($(this).val() == '1' || $(this).val() == '2' || $(this).val() == '4' || $(this).val() == '7' || $(this).val() == '8' || $(this).val() == '9') {
 				$('#unggah_karya_kelompok').html('Unggah Berkas Pendaftaran')
 			} else {
-				$('#unggah_karya_kelompok').html('Unggah Karya')
+				$('#unggah_karya_kelompok').html('Unggah Karya dan Berkas Pendaftaran')
 			}
 
 			if ($(this).val() == '1' || $(this).val() == '2') {
-				$('#unggah_karya').prop('required', false)
-				$('.unggah_karya').fadeOut(750)
 				if ($(this).val() == '1') {
 					status_pubg = true
 					status_ml = false
@@ -104,8 +99,6 @@
 			} else {
 				status_ml = false
 				status_pubg = false
-				$('.unggah_karya').fadeIn(750)
-				$('#unggah_karya').prop('required', true)
 				$('.id_ml_ketua').fadeOut(750)
 				$('#id_ml_ketua').prop('required', false)
 				$('.id_pubg_ketua').fadeOut(750)
@@ -193,8 +186,8 @@
 			}
 
 			html += `<div class="form-group">
-						<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar Anggota ${anggota}</h6>
-						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
+					<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar Anggota ${anggota}</h6>
+					<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -295,7 +288,7 @@
 						Swal.fire({
 							icon: 'error',
 							title: 'Oops...',
-							html: "Ada masalah saat melakukan pendaftaran! Sepertinya ukuran file kamu terlalu besar. Maks <b>10MB</b>",
+							html: "Ada masalah saat melakukan pendaftaran. Silakan coba lagi.",
 						})
 					}).finally(() => {
 						$('#pendaftaran_lomba_kelompok button[type=submit]').show();

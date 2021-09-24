@@ -3,13 +3,14 @@
 	const BASE_URL = "<?= base_url($uri_segment) ?>"
 
 	$(() => {
+
 		<?php if ($is_mobile) : ?>
 			Swal.fire({
 				icon: 'info',
 				title: 'Perhatian',
 				text: 'Disarankan untuk menggunakan akses desktop',
 				timer: false,
-				showConfirmButton: true,
+				showConfirmButton: true
 			})
 		<?php endif; ?>
 
@@ -69,12 +70,10 @@
 				$(this).val(null).change()
 			}
 
-			if ($(this).val() == '11') {
-				$('#unggah_karya').prop('required', false)
-				$('.unggah_karya').fadeOut(750)
+			if ($(this).val() == '11') { // Catur
+				$('#unggah_karya_individu').html('Unggah Berkas Pendaftaran')
 			} else {
-				$('.unggah_karya').fadeIn(750)
-				$('#unggah_karya').prop('required', true)
+				$('#unggah_karya_individu').html('Unggah Karya dan Berkas Pendaftaran')
 			}
 
 		})
@@ -135,7 +134,7 @@
 						Swal.fire({
 							icon: 'error',
 							title: 'Oops...',
-							html: "Ada masalah saat melakukan pendaftaran! Sepertinya ukuran file kamu terlalu besar. Maks <b>10MB</b>",
+							html: "Ada masalah saat melakukan pendaftaran. Silakan coba lagi.",
 						})
 					}).finally(() => {
 						$('#pendaftaran_lomba_individu button[type=submit]').show();

@@ -57,6 +57,10 @@
             name: 'nama_lomba',
             data: 'nama_lomba',
         }, {
+            title: 'Asal Instansi',
+            name: 'asal_instansi',
+            data: 'asal_instansi',
+        }, {
             title: 'Status',
             name: 'is_ketua',
             data: 'is_ketua',
@@ -229,6 +233,7 @@
             $('#form_detail input[name=no_hp]').val(row.no_hp);
             $('#form_detail input[name=id_tim]').val(row.nama_tim);
             $('#form_detail input[name=id_lomba]').val(row.nama_lomba);
+            $('#form_detail input[name=asal_instansi]').val(row.asal_instansi);
 
             if (row.id_pubg) {
                 $('.wadah_pubg').fadeIn(750)
@@ -257,13 +262,13 @@
 
                 $('#download_bukti_transfer').prop('href', "<?= base_url('uploads/peserta/') ?>" + row.bukti_transfer)
 
-                if (row.id_lomba == '1' || row.id_lomba == '2') {
-                    $('#download_karya').removeClass('btn-primary')
-                    $('#download_karya').addClass('btn-secondary')
-                    $('#download_karya').prop('disabled', true)
-                } else {
-                    $('#download_karya').prop('href', "<?= base_url('uploads/peserta/') ?>" + row.unggah_karya);
-                }
+                //                if (row.id_lomba == '1' || row.id_lomba == '2') {
+                //                  $('#download_karya').removeClass('btn-primary')
+                //                $('#download_karya').addClass('btn-secondary')
+                //              $('#download_karya').prop('disabled', true)
+                //        } else {
+                $('#download_karya').prop('href', "<?= base_url('uploads/peserta/') ?>" + row.unggah_karya);
+                //      }
             } else {
                 $('#download_bukti_transfer').removeClass('btn-primary')
                 $('#download_bukti_transfer').addClass('btn-secondary')

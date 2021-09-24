@@ -28,13 +28,15 @@ class Tim extends MY_Controller
     public function data()
     {
         $this->datatables->setTable("{$this->M_Tim->table} a");
-        $this->datatables->setColumnOrder([null, 'a.nama', 'a.asal_instansi', 'a.id_lomba', null]);
-        $this->datatables->setColumnSearch(['a.nama', 'a.asal_instansi']);
+        $this->datatables->setColumnOrder([null, 'a.nama', 'c.asal_instansi', 'a.id_lomba', null]);
+        $this->datatables->setColumnSearch(['a.nama', 'c.asal_instansi']);
         $this->datatables->setOrder(['a.id' => 'desc']);
         $this->datatables->generateTable(function () {
-            $this->db->select('a.*, b.nama_lomba')
-                ->join('lomba b', 'b.id = a.id_lomba');
-            $this->db->where('a.is_active', '1');
+            $this->db->select('a.*, b.nama_lomba, c.asal_instansi')
+                ->join('lomba b', 'b.id = a.id_lomba')
+                ->join('peserta c', 'c.id_tim = a.id')
+                ->where('a.is_active', '1')
+                ->group_by('c.id_tim');
 
             // Keperluan filter
             if ($this->input->get('id_lomba')) {

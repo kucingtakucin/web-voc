@@ -45,7 +45,7 @@
 
 					<div class="form-group">
 						<h6>Scan Kartu Tanda Mahasiswa / Kartu Pelajar</h6>
-						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
+						<small class="text-danger m-0">Max size <b>10MB</b>. <i>JPG, JPEG, PNG, PDF, ZIP, RAR.</i></small>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon00">Upload</span>
@@ -61,7 +61,7 @@
 
 					<div class="form-group">
 						<h6>Bukti Transfer</h6>
-						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
+						<small class="text-danger m-0">Max size <b>10MB</b>. <i>JPG, JPEG, PNG, PDF, ZIP, RAR.</i></small>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon000">Upload</span>
@@ -77,7 +77,7 @@
 
 					<div class="form-group unggah_karya">
 						<h6 id="unggah_karya_individu">Unggah Karya dan Berkas Pendaftaran</h6>
-						<small class="text-danger m-0">Max size <b>10MB</b>. JPG, JPEG, PNG, PDF, ZIP, RAR.</small>
+						<p class="text-danger m-0 p-0"><small class="m-0">Max size <b>10MB</b>. <i>ZIP, RAR.</i></small></p>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroupFileAddon0000">Upload</span>
@@ -89,6 +89,7 @@
 								<div class="valid-tooltip">Looks good</div>
 							</div>
 						</div>
+						<p class="text-primary m-0 p-0" id="formulir-catur" style="display: none;"><small class="m-0">Formulir Pendaftaran Lomba Catur: <a href="https://bit.ly/FormulirPendaftaranLombaCatur" target="_blank">bit.ly/FormulirPendaftaranLombaCatur</a></small></p>
 					</div>
 					<input type="hidden" name="MAX_FILE_SIZE" value="<?= (1024 * 1000 * 10) ?>"> <!-- 10 MB -->
 					<div class="form-group">

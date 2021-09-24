@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/logo-03.png">
+	<link rel="shortcut icon" href="<?= base_url(); ?>/assets/images/logo-03.png">
 	<title><?= sistem()->nama ?></title>
 	<meta name="description" content="VOC adalah singkatan dari Vocation Of The Champions. Dimana VOC ini merupakan
 						perlombaan untuk mahasiswa/i Vokasi dan siswa/i SMA/SMK/sederajat Se-Indonesia dengan berbagai cabang
@@ -24,15 +24,15 @@
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/font/font2.css"> -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
-	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/css/plugins.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/settings.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/layers.css">
-	<link rel="styleslaeet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/revolution/css/navigation.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/type/type.css"> -->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/icofont.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/style2.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/snowlake/gaya2.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/revolution/css/settings.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/revolution/css/layers.css">
+	<link rel="styleslaeet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/revolution/css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/type/type.css"> -->
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/icofont.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/style2.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/snowlake/gaya2.css">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/color/purple.css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/snowlake/snowlake-html/snowlake/style/css/font/font2.css">
@@ -107,7 +107,7 @@
 	<div class="content-wrapper">
 		<nav class="navbar bg-white navbar-expand-lg">
 			<div class="container justify-content-center">
-				<div class="navbar-brand"><a href="<?= base_url() ?>"><img src="#" srcset="<?php echo base_url(); ?>/assets/images/logo-02.png 1x, <?php echo base_url(); ?>/assets/images/logo-02.png 2x" style="width: 75px;" alt="" /></a></div>
+				<div class="navbar-brand"><a href="<?= base_url() ?>"><img src="#" srcset="<?= base_url(); ?>/assets/images/logo-02.png 1x, <?= base_url(); ?>/assets/images/logo-02.png 2x" style="width: 75px;" alt="" /></a></div>
 				<div class="navbar-other ml-auto order-lg-3">
 					<ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
 						<li class="nav-item">
@@ -127,7 +127,7 @@
 				<!-- /.navbar-other -->
 				<div class="navbar-collapse offcanvas-nav">
 					<div class="offcanvas-header d-lg-none d-xl-none">
-						<a href="<?= base_url() ?>"><img src="#" srcset="<?php echo base_url(); ?>/assets/images/logo-02.png 1x, <?php echo base_url(); ?>/assets/images/logo-02.png 2x" style="width: 100px;" alt="" /></a>
+						<a href="<?= base_url() ?>"><img src="#" srcset="<?= base_url(); ?>/assets/images/logo-02.png 1x, <?= base_url(); ?>/assets/images/logo-02.png 2x" style="width: 100px;" alt="" /></a>
 						<button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
 					</div>
 					<?php $this->load->view('templates/frontend/navbar') ?>
@@ -171,6 +171,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 	<script src="https://appt.demoo.id/tema/cuba/html/assets/js/form-validation-custom.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+	<script src="//code.tidio.co/8l1biywh0oqsx1b6k37opa8qw0rbe406.js" async></script>
 	<?php $this->load->view($script) ?>
 	<script>
 		$(document).ready(function() {

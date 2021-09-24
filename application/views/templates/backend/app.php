@@ -15,9 +15,9 @@
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/cuba/html/assets/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/cuba/css/fontawesome.css">
     <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/cuba/html/assets/css/vendors/icofont.css">
+    <link rel="stylesheet" type="text/css" href="https://bemsekolahvokasi.uns.ac.id/voc/assets/cuba/css/vendors/icofont.css">
     <!-- Themify icon-->
     <link rel="stylesheet" type="text/css" href="https://appt.demoo.id/tema/cuba/html/assets/css/vendors/themify.css">
     <!-- Flag icon-->

@@ -7,7 +7,6 @@ use PhpOffice\PhpSpreadsheet\Style\Alignment;
 use PhpOffice\PhpSpreadsheet\Style\Border;
 use PhpOffice\PhpSpreadsheet\Style\Color;
 use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -119,7 +118,7 @@ class Peserta extends MY_Controller
             ->setDescription('Data Peserta Lomba')
             ->setKeywords('data peserta lomba voc');
 
-        $spreadsheet->getActiveSheet()->getStyle('B5:I5')
+        $spreadsheet->getActiveSheet()->getStyle('B5:K5')
             ->getFill()
             ->setFillType(Fill::FILL_SOLID)
             ->getStartColor()
@@ -169,17 +168,27 @@ class Peserta extends MY_Controller
             ->getStyle('I5')
             ->getFont()
             ->setBold(true);
+        $spreadsheet->setActiveSheetIndex(0)
+            ->setCellValue('J5', 'ID PUBG')
+            ->getStyle('J5')
+            ->getFont()
+            ->setBold(true);
+        $spreadsheet->setActiveSheetIndex(0)
+            ->setCellValue('K5', 'ID MOBILE LEGENDS')
+            ->getStyle('K5')
+            ->getFont()
+            ->setBold(true);
 
-        $spreadsheet->getActiveSheet(0)->getStyle('B5:I5')
+        $spreadsheet->getActiveSheet(0)->getStyle('B5:K5')
             ->getAlignment()
             ->setHorizontal(Alignment::HORIZONTAL_CENTER);
-        $spreadsheet->getActiveSheet(0)->getStyle('B5:I5')
+        $spreadsheet->getActiveSheet(0)->getStyle('B5:K5')
             ->getAlignment()
             ->setVertical(Alignment::VERTICAL_CENTER);
 
         $spreadsheet->getActiveSheet()->getRowDimension('5')->setRowHeight(30);
 
-        $columns = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+        $columns = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
 
         foreach ($columns as $column) {
             $spreadsheet->getActiveSheet()
@@ -208,6 +217,8 @@ class Peserta extends MY_Controller
             $spreadsheet->setActiveSheetIndex(0)->setCellValue('G' . $awal, $datum->asal_instansi);
             $spreadsheet->setActiveSheetIndex(0)->setCellValue('H' . $awal, $datum->nama_tim);
             $spreadsheet->setActiveSheetIndex(0)->setCellValue('I' . $awal, $datum->nama_lomba);
+            $spreadsheet->setActiveSheetIndex(0)->setCellValueExplicit('J' . $awal, "{$datum->id_pubg}", DataType::TYPE_STRING);
+            $spreadsheet->setActiveSheetIndex(0)->setCellValueExplicit('K' . $awal, "{$datum->id_ml}", DataType::TYPE_STRING);
 
             foreach ($columns as $column) {
                 $spreadsheet->getActiveSheet()
@@ -227,5 +238,3 @@ class Peserta extends MY_Controller
         return $writer->save('php://output');
     }
 }
-
-/* End of file Home.php */
